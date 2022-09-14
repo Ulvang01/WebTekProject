@@ -44,7 +44,7 @@ It is important to keep your branch up-to-date. In this project we will keep our
 
 ```bash
 git switch <branch-name> # branch-name being the branch you want to keep up-to-date
-git fetch origin
+git fetch
 git merge origin/<up-to-date-branch> # up-to-date-branch being the branch that merges into your branch
 ```
 
