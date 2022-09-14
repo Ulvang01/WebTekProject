@@ -14,3 +14,5 @@ const displayName = (names) => {
 changeNameButton.onclick = () => {
     displayName(names);
 }
+
+console.log("Hello World!");
