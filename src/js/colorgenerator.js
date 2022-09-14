@@ -1,7 +1,7 @@
 const hexColor = "#00ff00";
 
 function hexToRGB(hex) {
-    //
+    // converts from hex to rgb
     let r = 0, g = 0, b = 0;
     if (hex.length == 4) {
         r = "0x" + hex[1] + hex[1];
@@ -17,11 +17,12 @@ function hexToRGB(hex) {
 }
 
 function hexToHSL(hex) {
+    // first converts to rbg
     let rgb = hexToRGB(hex);
     let r = rgb[0];
     let g = rgb[1];
     let b = rgb[2];
-    // converting from rgb to HSL
+    // then converting from rgb to HSL
     r /= 255;
     g /= 255;
     b /= 255;
