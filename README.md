@@ -53,6 +53,7 @@ git merge origin/<up-to-date-branch> # up-to-date-branch being the branch that m
 If you have deleted a branch on GitHub, that branch would not be removed locally on your computer. To do this, you would type:
 
 ```bash
+git branch -D <branch-name>
 git remote prune origin
 ```
 
