@@ -1,22 +1,22 @@
 {
-  "name": "webtek-project",
-  "version": "1.0.0",
-  "description": "Project for IT2805",
-  "main": "index.js",
-  "repository": "git@github.com:TheFakeKiwi/WebTekProject.git",
-  "author": "leifeggenfellner <eggenfellner@protonmail.com>",
-  "license": "MIT",
-  "private": false,
-  "devDependencies": {
-    "eslint": "^8.23.1",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.11.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^28.0.0"
-  },
-  "dependencies": {
-    "esprima": "^4.0.1",
-    "yarn": "^1.22.19"
-  }
+	"name": "webtek-project",
+	"version": "1.0.0",
+	"description": "Project for IT2805",
+	"main": "index.js",
+	"repository": "git@github.com:TheFakeKiwi/WebTekProject.git",
+	"author": "leifeggenfellner <eggenfellner@protonmail.com>",
+	"license": "MIT",
+	"private": false,
+	"devDependencies": {
+		"eslint": "^8.23.1",
+		"eslint-config-prettier": "^8.5.0",
+		"prettier": "^2.7.1",
+		"stylelint": "^14.11.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard": "^28.0.0"
+	},
+	"dependencies": {
+		"esprima": "^4.0.1",
+		"yarn": "^1.22.19"
+	}
 }
