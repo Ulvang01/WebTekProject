@@ -40,4 +40,5 @@ jobs:
         with:
           auto_fix: true
           prettier: true
+          eslint: true
           stylelint: true
