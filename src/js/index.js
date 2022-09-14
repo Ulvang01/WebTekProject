@@ -1,6 +1,8 @@
+/* Getting the elements from the HTML file. */
 const nameContainer = document.getElementById('name-container');
 const changeNameButton = document.getElementById('change-name');
 
+/* Creating an array of names. */
 const names = ['Edvard', 'Leif', 'Christoffer', 'Scott', 'Simon', 'Sepanta'];
 
 /**
