@@ -40,7 +40,7 @@ git push -u origin <branch-name>
 
 ### Keep branch up-to-date
 
-It is important to keep your branch up-to-date. In this project we will keep our branches up-to-date with the dev branch. To do this you would type:
+It is important to keep your branch up-to-date. To do this you would type:
 
 ```bash
 git switch <branch-name> # branch-name being the branch you want to keep up-to-date
