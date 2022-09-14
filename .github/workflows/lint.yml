@@ -42,4 +42,3 @@ jobs:
           eslint: true
           prettier: true
           stylelint: true
-          continue_on_error: false
