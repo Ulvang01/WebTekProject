@@ -38,6 +38,16 @@ After switching to a different branch, the first time you commit, you need to ru
 git push -u origin <branch-name>
 ```
 
+### Keep branch up-to-date
+
+It is important to keep your branch up-to-date. In this project we will keep our branches up-to-date with the dev branch. To do this you would type:
+
+```bash
+git switch <branch-name> # branch-name being the branch you want to keep up-to-date
+git fetch origin
+git merge origin/<up-to-date-branch> # up-to-date-branch being the branch that merges into your branch
+```
+
 ### Remove deleted branches
 
 If you have deleted a branch on GitHub, that branch would not be removed locally on your computer. To do this, you would type:
