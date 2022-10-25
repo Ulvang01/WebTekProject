@@ -4,7 +4,7 @@
 
 html,
 body {
-	margin: 0;
+	margin: 2%;
 	padding: 0;
 }
 
@@ -21,4 +21,9 @@ body {
 
 h1 {
 	color: #a3be8c;
+}
+
+a {
+	text-decoration: none;
+	color: #81a1c1;
 }

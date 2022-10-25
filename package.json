@@ -3,8 +3,11 @@
 	"version": "1.0.0",
 	"description": "Project for IT2805",
 	"main": "index.js",
+	"scripts": {
+		"postcss:watch": "postcss ./src/css/style.css --dir ./public/css --watch"
+	},
 	"repository": "git@github.com:TheFakeKiwi/WebTekProject.git",
-	"author": "leifeggenfellner <eggenfellner@protonmail.com>",
+	"author": "TheFakeKiwi",
 	"license": "MIT",
 	"private": false,
 	"devDependencies": {
