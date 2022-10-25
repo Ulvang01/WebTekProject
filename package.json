@@ -4,7 +4,7 @@
 	"description": "Project for IT2805",
 	"main": "index.js",
 	"scripts": {
-		"postcss:watch": "postcss ./src/css/style.css --dir ./public/css --watch"
+		"test": "echo 'hello world'"
 	},
 	"repository": "git@github.com:TheFakeKiwi/WebTekProject.git",
 	"author": "TheFakeKiwi",
