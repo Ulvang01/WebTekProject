@@ -63,6 +63,9 @@ nav {
 	gap: 8px;
 }
 
+
+/* LOGO */
+
 .anchor {
 	height: 20px;
 	width: 20px;
@@ -70,6 +73,12 @@ nav {
 
 .logo-text {
 	color: var(--orange);
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
 
 /* HOME PAGE */
@@ -81,6 +90,24 @@ main {
 
 #home {
 	height: 90vh;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.button-container > button {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 4px;
+	background-color: var(--orange);
+	border: none;
+	outline: none;
+	border-radius: 3px;
 }
 
 .boat-gif {
@@ -222,12 +249,34 @@ footer {
 	header {
 		background-color: var(--blue-100);
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+		height: 75px;
+		position: static;
+
+	}
+
+	nav {
+		position: absolute;
+		width: 90%;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	#home {
 		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.home-text {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
+	}
+
+	.home-text > h1 {
+		color: var(--orange);
 	}
 
 	.color-box {
@@ -246,7 +295,6 @@ footer {
 	}
 
 	.boat-gif {
-		display: block;
 		width: 300px;
 		height: 300px;
 	}
