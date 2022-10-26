@@ -5,8 +5,36 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact us • Color Ocean</title>
+		<link rel="stylesheet" href="./css/style.css"> <!-- Temporary -->
 	</head>
 	<body>
+		<header>
+			<nav>
+				<p class="logo">
+					<span>Logo</span>
+					Color Ocean
+				</p>
+				<div class="nav-list">
+					<a href="./index.html" class="inuse">Home</a>
+					<a href="./about.html">About</a>
+				</div>
+			</nav>
+		</header>
+
 		<h1>Work in progress</h1>
+
+		<main>
+			<h2>Contact us</h2>
+
+			<form action="./" method="post">
+				<div class="inputs">
+					<label for="subject">Subject: </label>
+                	<input type="text" name="subject" id="subject" required placeholder="Subject">
+				</div>
+				<div class="txt"> <!-- Temporary classes -->
+					<textarea name="problem" id="problem" cols="30" rows="10" required placeholder="Tell us about the problem"></textarea>
+				</div>
+			</form>
+		</main>
 	</body>
 </html>
