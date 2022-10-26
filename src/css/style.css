@@ -25,8 +25,22 @@ body {
 }
 
 h1 {
-	margin: 0;
 	text-transform: uppercase;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: none;
 }
 
 a {
@@ -40,6 +54,7 @@ a {
 header {
 	background-color: var(--blue-150);
 	padding: 5px 0;
+	height: 5%;
 }
 
 nav {
@@ -67,8 +82,7 @@ main {
 }
 
 #home {
-	height: 100vh;
-	background-color: var(--blue-100);
+	height: 90vh;
 }
 
 .boat-gif {
@@ -203,8 +217,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-	#home {
+	body {
 		background-color: var(--blue-100);
+	}
+
+	header {
+		filter: drop-shadow(0 4 4 rgb(0 0 0 / 25%));
+	}
+
+	#home {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
