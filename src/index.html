@@ -12,10 +12,10 @@
 	<body>
 		<header>
 			<nav>
-				<p class="logo">
+				<div class="logo">
 					<img src="./img/anchor.svg" alt="anchor" class="anchor" />
-					Color<span class="logo-text">Ocean</span>
-				</p>
+					<p>Color<span class="logo-text">Ocean</span></p>
+				</div>
 				<div class="nav-list">
 					<a href="./index.html" class="inuse">Home</a>
 					<a href="./about.html">About</a>
@@ -24,10 +24,15 @@
 		</header>
 		<main>
 			<section id="home">
-				<h1>Front page</h1>
+				<div class="home-text">
+					<h1>Enter a color</h1>
+					<h2>and generate<br /><span>color palettes</span></h2>
+				</div>
 				<div class="button-container">
 					<input type="color" id="color-input" value="#112D4E" />
-					<button>Generate</button>
+					<button>
+						<img class="anchor" src="./img/anchor-white.svg" alt="" /> Generate
+					</button>
 				</div>
 				<img class="boat-gif" src="./img/boat.gif" alt="boat" />
 			</section>
@@ -95,8 +100,8 @@
 		</main>
 		<footer>
 			<p class="logo">
-				<span>Logo</span>
-				Color Ocean
+				<img src="./img/anchor.svg" alt="anchor" class="anchor" />
+				Color<span class="logo-text">Ocean</span>
 			</p>
 			<a href="./contact.html">Contact</a>
 			<a href="#home">Back to the top</a>
