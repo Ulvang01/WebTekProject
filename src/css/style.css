@@ -202,6 +202,13 @@ footer {
 	background-color: var(--blue-100);
 }
 
+/* CONTACT FOOTER (Sticky) */
+#contactFoot{
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+}
+
 @media screen and (max-width: 768px) {
 	#home {
 		background-color: var(--blue-100);
