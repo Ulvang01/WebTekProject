@@ -7,31 +7,28 @@
 		<title>Contact us • Color Ocean</title>
 		<link rel="stylesheet" href="./css/style.css"> <!-- Temporary -->
 	</head>
-	<body>
-		<header>
+	<body id="contactBod">
+		<header id="contactHeader">
 			<nav>
 				<p class="logo">
 					<span>Logo</span>
 					Color Ocean
 				</p>
 				<div class="nav-list">
-					<a href="./index.html" class="inuse">Home</a>
+					<a href="./index.html">Home</a>
 					<a href="./about.html">About</a>
 				</div>
 			</nav>
 		</header>
 
-		<h1>Work in progress</h1>
-
-		<main>
+		<main id="contactMain">
 			<h2>Contact us</h2>
 
 			<form action="./" method="post">
 				<div class="inputs">
-					<label for="subject">Subject: </label>
                 	<input type="text" name="subject" id="subject" required placeholder="Subject">
 				</div>
-				<div class="txt"> <!-- Temporary classes -->
+				<div>
 					<textarea name="problem" id="problem" cols="30" rows="10" required placeholder="Tell us about the problem" style="resize: none;"></textarea>
 				</div>
 
@@ -40,14 +37,12 @@
 			
 		</main>
 		<footer id="contactFoot">
-			<nav>
-				<p class="logo">
-					<span>Logo</span>
-					Color Ocean
-				</p>
-				<a href="./contact.html">Contact</a>
-				<a href="#home">Back to the top</a>
-			</nav>
+			<p class="logo">
+				<span>Logo</span>
+				Color Ocean
+			</p>
+			<a href="./contact.html">Contact</a>
+			<a href="#home">Back to the top</a>
 		</footer>
 	</body>
 </html>

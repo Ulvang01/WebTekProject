@@ -202,11 +202,43 @@ footer {
 	background-color: var(--blue-100);
 }
 
-/* CONTACT FOOTER (Sticky) */
+/* CONTACT */
+
+#contactBod{ 	
+	background-image: linear-gradient(#dbd7d7, #38769081);
+	
+}
+
+#contactHeader{
+	background-color: transparent;
+}
+
+#contactMain{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 86vh;
+}
+
+textarea{
+	width: 40vw;
+	color: black;
+}
+
+input[type="submit"]{
+	background-color: #fd7702;
+	border: none;
+	width: 30%;
+	height: 20%;
+}
+
+/* FOOTER (Sticky) */
 #contactFoot{
 	position: fixed;
 	bottom: 0;
-	width: 100vw;
+	width: 98vw; /* Veit ikkje heilt ka greia e, men teksten stikk litt ut av sida hvis i bruke width: 100vw; */
+	/* Kan hende du veit koffor Leif, men d her va d eneste i kom på for å gjør footern sticky :zany_face: */
+	background-color: #232A5C;
 }
 
 @media screen and (max-width: 768px) {
