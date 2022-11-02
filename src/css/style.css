@@ -239,6 +239,9 @@ form {
 #subject {
 	width: 40vw;
 	text-align: left;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-bottom: 10px;
 }
 
 textarea{
@@ -246,11 +249,13 @@ textarea{
 	color: black;
 	text-align: left;
 	font-size: 16px;
+	border: none;
 }
 
 textarea::placeholder{
 	text-align: center;
 	font-size: 20px;
+	padding: 14.5% 0;
 }
 
 #subject::placeholder{
@@ -260,7 +265,9 @@ textarea::placeholder{
 input[type="submit"]{
 	background-color: #fd7702;
 	border: none;
-	width: 30%;
+	width: 25%;
+	padding: 10px;
+	font-size: 25px;
 }
 
 #contactFoot{
