@@ -305,5 +305,72 @@ input[type="submit"]{
 
 
 	/* CONTACT */
+	#contactBod{ 	
+		background-image: radial-gradient(at top right,#72C6EF, #004E8F);
+		/* Blei ikkje heilt lik som i figma, men usikker på kordan i ska ordne d */
+	}
+
+	#contactHeader{
+		background-color: #408AB4;
+		margin-bottom: 15px;
+	}
 	
+	#contactMain, h2 {
+		font-size: 40px;
+		color: #f9f7f7;
+	}
+	
+	#contactMain{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 82.8vh;
+	}
+	
+	form {
+		margin-top: -30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#subject {
+		width: 70vw;
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+	
+	textarea{
+		width: 70vw;
+		height: 50vh;
+		color: black;
+		text-align: left;
+		font-size: 16px;
+		border: none;
+	}
+	
+	textarea::placeholder{
+		text-align: center;
+		font-size: 30px;
+		
+	}
+	
+	#subject::placeholder{
+		font-size: 24px;
+	}
+	
+	input[type="submit"]{
+		background-color: #fd7702;
+		border: none;
+		width: 50%;
+		padding: 10px;
+		font-size: 24px;
+	}
+	
+	#contactFoot{
+		background-color: transparent;
+		font-size: 22px;
+	}
 }
