@@ -1,6 +1,5 @@
 * {
 	font-family: Arial, Helvetica, sans-serif;
-	color: var(--white);
 }
 
 :root {
@@ -11,6 +10,8 @@
 	--blue-150: #34699a;
 	--blue-200: #112d4e;
 	--text-black: #2e3440;
+	--light: 80;
+	--threshold: 60;
 }
 
 body,
@@ -26,10 +27,6 @@ html {
 body {
 	height: 100%;
 	width: 100%;
-}
-
-h1 {
-	text-transform: uppercase;
 }
 
 a {
@@ -89,7 +86,7 @@ main {
 }
 
 #home {
-	height: 90vh;
+	height: 100vh;
 }
 
 .button-container {
@@ -99,7 +96,7 @@ main {
 	gap: 15px;
 }
 
-.button-container > button {
+#submit-btn {
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -108,6 +105,22 @@ main {
 	border: none;
 	outline: none;
 	border-radius: 3px;
+}
+
+#submit-btn:hover {
+	cursor: pointer;
+}
+
+input[type="text"] {
+	outline: none;
+}
+
+#color-input {
+	color: var(--white);
+	background-color: var(--blue-200);
+	border: none;
+	border-radius: 3px;
+	padding: 4px;
 }
 
 .boat-gif {
@@ -242,6 +255,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+	* {
+		color: var(--white);
+	}
+
 	body {
 		background-color: var(--blue-100);
 	}
@@ -250,7 +267,7 @@ footer {
 		background-color: var(--blue-100);
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 		height: 75px;
-		position: static;
+		position: fixed;
 
 	}
 
@@ -266,6 +283,7 @@ footer {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		justify-content: center;
 	}
 
 	.home-text {
@@ -295,6 +313,7 @@ footer {
 	}
 
 	.boat-gif {
+		display: block;
 		width: 300px;
 		height: 300px;
 	}
