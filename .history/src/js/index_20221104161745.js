@@ -8,7 +8,4 @@ const colorPalletes = {
     "palette2": ["#F9F871", "#FFC75F", "#FF9671", "#FF6F91", "#D65DB1", "#845EC2"]
 };
 
-document.getElementById('submit-btn').onclick = () => {
-    createComponents(colorPalletes);
-    document.getElementById('color-section').scrollIntoView();
-}
+document.getElementById('submit-btn').onclick = () => createComponents(colorPalletes);
