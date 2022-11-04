@@ -142,7 +142,7 @@ input[type="text"] {
 	padding-bottom: 10px;
 }
 
-.theme-title {
+.palette-name {
 	color: var(--text-black);
 	margin-bottom: 40px;
 	font-size: 2rem;
