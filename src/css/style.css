@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.google.com/css2?family=PT+Sans?display=swap");
 
 * {
 	font-family: 'Bebas Neue', cursive;
 }
+
 
 :root {
 	--orange: #fd7702;
@@ -24,6 +26,8 @@ html {
 
 html {
 	scroll-behavior: smooth;
+	height: 100%;
+	width: 100%;
 }
 
 body {
@@ -43,6 +47,7 @@ header {
 	padding: 5px 0;
 	height: min-content;
 	width: 100%;
+	top: 0;
 }
 
 nav {
