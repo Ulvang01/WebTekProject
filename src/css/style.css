@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 * {
@@ -252,6 +252,10 @@ footer > .logo > .anchor-footer  {
 	nav > .logo > .anchor {
 		height: 18px;
 		width: 18px;
+	}
+
+	main {
+		min-height: 100vh;
 	}
 
 	#home {
