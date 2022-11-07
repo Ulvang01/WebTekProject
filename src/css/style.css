@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 * {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -32,6 +32,11 @@ body {
 	width: 100%;
 }
 
+h1 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
 a {
 	text-decoration: none;
 	color: var(--white);
@@ -42,6 +47,7 @@ a {
 
 header {
 	padding: 5px 0;
+	background-color: var(--blue-150);
 	height: min-content;
 	width: 100%;
 	position: relative;
@@ -218,6 +224,77 @@ footer {
 	background-color: var(--blue-100);
 }
 
+/* CONTACT */
+
+#contactBod{ 	
+	background-image: linear-gradient(#dbd7d7, #38769081);
+	
+}
+
+#contactHeader{
+	background-color: transparent;
+	font-size: 25px;
+	margin-top: -15px;
+}
+
+#contactMain > h2 {
+	font-size: 50px;
+	margin-top: -3px;
+	color: #f9f7f7;
+}
+
+#contactMain{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 82.8vh;
+}
+
+form {
+	margin-top: -30px;
+	display: flex;
+  	flex-direction: column;
+	align-items: center;
+}
+
+#subject {
+	width: 40vw;
+	text-align: left;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-bottom: 10px;
+}
+
+textarea{
+	width: 40vw;
+	color: black;
+	text-align: left;
+	font-size: 16px;
+	border: none;
+}
+
+textarea::placeholder{
+	text-align: center;
+	font-size: 20px;
+	padding: 14.5% 0;
+}
+
+#subject::placeholder{
+	font-size: 18px;
+}
+
+input[type="submit"]{
+	background-color: #fd7702;
+	border: none;
+	width: 25%;
+	padding: 10px;
+	font-size: 25px;
+}
+
+#contactFoot{
+	background-color: #232A5C;
+}
+
 footer > .logo > .anchor-footer  {
 	height: 15px;
 	width: 15px;
@@ -339,9 +416,74 @@ footer > .logo > .anchor-footer  {
 		display: block;
 		width: 300px;
 		height: 300px;
-		margin: auto
+    margin: auto
 	}
 
+	/* CONTACT */
+	#contactBod{ 	
+		background-image: radial-gradient(at top right,#72C6EF, #004E8F);
+		/* Blei ikkje heilt lik som i figma, men usikker på kordan i ska ordne d */
+	}
+
+	#contactHeader{
+		background-color: #408AB4;
+		margin-bottom: 15px;
+	}
+	
+	#contactMain > h2 {
+		font-size: 40px;
+		color: #f9f7f7;
+	}
+	
+	#contactMain {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 82.8vh;
+	}
+	
+	form {
+		margin-top: -30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#subject {
+		width: 70vw;
+		text-align: left;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+	
+	textarea{
+		width: 70vw;
+		height: 50vh;
+		color: black;
+		text-align: left;
+		font-size: 16px;
+		border: none;
+	}
+	
+	textarea::placeholder{
+		text-align: center;
+		font-size: 30px;
+		
+	}
+	
+	#subject::placeholder{
+		font-size: 24px;
+	}
+	
+	input[type="submit"]{
+		background-color: #fd7702;
+		border: none;
+		width: 50%;
+		padding: 10px;
+		font-size: 24px;
+	}
+	
 	footer {
 		font-size: 1.125rem;
 		display: flex;
