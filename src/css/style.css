@@ -3,6 +3,7 @@
 
 * {
 	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+	color: var(--white);
 }
 
 :root {
@@ -13,8 +14,6 @@
 	--blue-150: #34699a;
 	--blue-200: #112d4e;
 	--text-black: #2e3440;
-	--light: 80;
-	--threshold: 60;
 }
 
 body,
@@ -226,24 +225,24 @@ footer {
 
 /* CONTACT */
 
-#contactBod{ 	
+#contact-bod { 	
 	background-image: linear-gradient(#dbd7d7, #38769081);
 	
 }
 
-#contactHeader{
+#contact-header {
 	background-color: transparent;
 	font-size: 25px;
 	margin-top: -15px;
 }
 
-#contactMain > h2 {
+#contact-main > h2 {
 	font-size: 50px;
 	margin-top: -3px;
 	color: #f9f7f7;
 }
 
-#contactMain{
+#contact-main{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -253,7 +252,7 @@ footer {
 form {
 	margin-top: -30px;
 	display: flex;
-  	flex-direction: column;
+	flex-direction: column;
 	align-items: center;
 }
 
@@ -291,7 +290,7 @@ input[type="submit"]{
 	font-size: 25px;
 }
 
-#contactFoot{
+#contact-foot{
 	background-color: #232A5C;
 }
 
@@ -416,7 +415,7 @@ footer > .logo > .anchor-footer  {
 		display: block;
 		width: 300px;
 		height: 300px;
-    margin: auto
+		margin: auto
 	}
 
 	/* CONTACT */
