@@ -10,18 +10,18 @@ h1 {
 	color: #a3be8c;
 }
 
-#name-container {
+#name {
 	color: #ebcb8b;
 }
 
-#change-name {
+.button {
 	padding: 0.5em 1em;
 	background-color: #bf616a;
 	outline: none;
 	border: 4px solid #88c0d0;
 }
 
-#change-name:hover {
+.button:hover {
 	cursor: pointer;
 	background-color: #a3be8c;
 	transition: ease-in 0.1s;

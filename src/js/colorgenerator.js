@@ -449,4 +449,3 @@ palett10 = {
         this.colors = newcolors;
     }
 };
-
