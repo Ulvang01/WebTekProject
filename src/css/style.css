@@ -419,26 +419,26 @@ footer > .logo > .anchor-footer  {
 	}
 
 	/* CONTACT */
-	#contactBod{ 	
-		background-image: radial-gradient(at top right,#72C6EF, #004E8F);
-		/* Blei ikkje heilt lik som i figma, men usikker på kordan i ska ordne d */
+	#contact-bod{ 	
+		background-color: var(--blue-100);
+		background-image: none;
 	}
 
-	#contactHeader{
-		background-color: #408AB4;
+	#contact-header{
+		background-color: var(--blue-100);
 		margin-bottom: 15px;
 	}
 	
-	#contactMain > h2 {
+	#contact-main > h2 {
 		font-size: 40px;
-		color: #f9f7f7;
 	}
 	
-	#contactMain {
+	#contact-main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 82.8vh;
+		min-height: 100vh;
+		margin-top: 90px;
 	}
 	
 	form {
