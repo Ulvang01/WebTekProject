@@ -1,4 +1,4 @@
-convert = {
+const convert = {
 	toHSL: function (hex) {
 		let r = 0,
 			g = 0,
@@ -92,8 +92,8 @@ convert = {
 		if (b.length == 1) {
 			b = '0' + b;
 		}
-		hex = '#' + r + g + b;
 
+		const hex = '#' + r + g + b;
 		return hex;
 	},
 	toRGB: function (hex) {
@@ -213,7 +213,6 @@ convert = {
 		x = x / 95.047;
 		y = y / 100;
 		z = z / 108.883;
-
 		if (x > 0.008856) x = Math.pow(x, 1 / 3);
 		else x = 7.787 * x + 16 / 116;
 		if (y > 0.008856) y = Math.pow(y, 1 / 3);
@@ -222,14 +221,14 @@ convert = {
 		else z = 7.787 * z + 16 / 116;
 
 		let l = 116 * y - 16,
-			a = 500 * (x - y),
-			b = 200 * (y - z);
+			a = 500 * (x - y);
+		b = 200 * (y - z);
 
 		return [Math.round(l), Math.round(a), Math.round(b)];
 	}
 };
 
-colors = {
+const colors = {
 	getHue: function (hex) {
 		return convert.toHSL(hex)[0];
 	},
@@ -314,14 +313,14 @@ colors = {
 	}
 };
 
-schemes = {
+const schemes = {
 	triadic: function (hex) {
 		let newcolors = [hex];
 		let currentColor = hex;
-		currentColor = blackNorWhite(currentColor, 10, 10, 10);
+		currentColor = colors.blackNorWhite(currentColor, 10, 10, 10);
 
 		for (let i = 1; i < 3; i++) {
-			newcolors.push(addHue(currentColor, 120 * i));
+			newcolors.push(colors.addHue(currentColor, 120 * i));
 		}
 
 		return newcolors;
@@ -332,9 +331,8 @@ schemes = {
 		currentColor = colors.blackNorWhite(currentColor, 10, 10, 10);
 
 		for (let i = 1; i < 4; i++) {
-			newcolors.push(addHue(currentColor, 90 * i));
+			newcolors.push(colors.addHue(currentColor, 90 * i));
 		}
-
 		return newcolors;
 	},
 	analogous: function (hex, ang, steps) {
@@ -383,108 +381,115 @@ schemes = {
 		];
 	},
 	shadesOfGray: function (hex) {
-		newcolors = [hex];
+		let newcolors = [hex];
 		let currentColor = hex;
 		currentColor = colors.blackNorWhite(currentColor, 10, 10, 10);
 
 		for (let i = 1; i < 10; i++) {
-			newcolors.push(addSaturation(currentColor, -10 * i));
+			newcolors.push(colors.addSaturation(currentColor, -10 * i));
 		}
 
 		return newcolors;
 	}
 };
 
-palett1 = {
-	name: 'Triadic',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.triadic(hex);
-	}
+const generatePalettes = (hex) => {
+	const palette1 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.triadic(hex);
+		}
+	};
+
+	const palette2 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.tetradic(hex);
+		}
+	};
+
+	const palette3 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.analogous(hex, 150, 5);
+		}
+	};
+
+	const palette4 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.analogous(hex, -150, 5);
+		}
+	};
+
+	const palette5 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.monochromatic(hex, 20, 5).sort();
+		}
+	};
+
+	const palette6 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.splitComplementary(hex);
+		}
+	};
+
+	const palette7 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.compound(hex);
+		}
+	};
+
+	const palette8 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.shades(hex).sort();
+		}
+	};
+
+	const palette9 = {
+		colors: [],
+		generate: function () {
+			this.colors = schemes.shadesOfGray(hex).sort();
+		}
+	};
+
+	const palette10 = {
+		colors: [],
+		generate: function () {
+			let newcolors = [hex];
+			let currentColor = colors.blackNorWhite(hex);
+
+			newcolors.push(
+				colors.addSaturation(colors.addLightness(currentColor, 20), 20)
+			);
+			newcolors.push(
+				colors.addSaturation(colors.addLightness(currentColor, 70), 60)
+			);
+
+			let color2 = colors.addHue(currentColor, 130);
+			newcolors.push(color2);
+			newcolors.push(colors.addSaturation(colors.addLightness(color2, 20), 20));
+
+			this.colors = newcolors;
+		}
+	};
+
+	return {
+		Triadic: palette1.colors,
+		Tetradic: palette2.colors,
+		'Generic Analogous': palette3.colors,
+		'Reverse Analogous': palette4.colors,
+		Monochromatic: palette5.colors,
+		'Split Complementary': palette6.colors,
+		Compound: palette7.colors,
+		Shades: palette8.colors,
+		'Shades of Gray': palette9.colors,
+		Classy: palette10.colors
+	};
 };
 
-palett2 = {
-	name: 'Tetradic',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.tetradic(hex);
-	}
-};
-
-palett3 = {
-	name: 'Generic Analogous',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.analogous(hex, 150, 5);
-	}
-};
-
-palett4 = {
-	name: 'Reverse Analogous',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.analogous(hex, -150, 5);
-	}
-};
-
-palett5 = {
-	name: 'Monochromatic',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.monochromatic(hex, 20, 5).sort();
-	}
-};
-
-palett6 = {
-	name: 'Split Complementary',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.splitComplementary(hex);
-	}
-};
-
-palett7 = {
-	name: 'Compound',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.compound(hex);
-	}
-};
-
-palett8 = {
-	name: 'Shades',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.shades(hex).sort();
-	}
-};
-
-palett9 = {
-	name: 'Shades of Gray',
-	colors: [],
-	generate: function (hex) {
-		this.colors = schemes.shadesOfGray(hex).sort();
-	}
-};
-
-palett10 = {
-	name: 'Classy',
-	colors: [],
-	generate: function (hex) {
-		let newcolors = [hex];
-		let currentColor = colors.blackNorWhite(hex);
-
-		newcolors.push(
-			colors.addSaturation(colors.addLightness(currentColor, 20), 20)
-		);
-		newcolors.push(
-			colors.addSaturation(colors.addLightness(currentColor, 70), 60)
-		);
-
-		let color2 = colors.addHue(currentColor, 130);
-		newcolors.push(color2);
-		newcolors.push(colors.addSaturation(colors.addLightness(color2, 20), 20));
-
-		this.colors = newcolors;
-	}
-};
+export default generatePalettes;
