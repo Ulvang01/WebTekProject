@@ -253,7 +253,7 @@ footer {
 #contact-main > h2 {
 	font-size: 50px;
 	margin-top: -3px;
-	color: #f9f7f7;
+	color: var(--white);
 }
 
 #contact-main {
@@ -280,7 +280,7 @@ form {
 
 textarea {
 	width: 40vw;
-	color: black;
+	color: var(--text-black);
 	text-align: left;
 	font-size: 16px;
 	border: none;
@@ -303,7 +303,7 @@ textarea::placeholder {
 }
 
 #contact-foot {
-	background-color: #232A5C;
+	background-color: var(--blue-200);
 }
 
 footer > .logo > .anchor-footer {
