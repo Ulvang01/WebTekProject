@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
+/* TODO: 
+
+	? * Contact Page
+	* Change background color
+	* Expand gap in nav link on desktop
+	* Outline none textarea
+	* Border on focus textarea and subject field
+	* Cursor pointer on hover button
+	* Hover animation on submit button
+	* Border radius 10% or 2px or smth on submit button
+	* Border radius on input field and textarea
+*/
+
 * {
 	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 	color: var(--white);
@@ -67,7 +80,7 @@ nav {
 .nav-list {
 	display: flex;
 	list-style: none;
-	gap: 8px;
+	gap: 20px;
 }
 
 
@@ -243,7 +256,7 @@ footer {
 	color: #f9f7f7;
 }
 
-#contact-main{
+#contact-main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -265,7 +278,7 @@ form {
 	margin-bottom: 10px;
 }
 
-textarea{
+textarea {
 	width: 40vw;
 	color: black;
 	text-align: left;
@@ -273,27 +286,27 @@ textarea{
 	border: none;
 }
 
-textarea::placeholder{
+textarea::placeholder {
 	font-size: 20px;
 }
 
-#subject::placeholder{
+#subject::placeholder {
 	font-size: 18px;
 }
 
-input[type="submit"]{
-	background-color: var(--orane);
+#submit {
+	background-color: var(--orange);
 	border: none;
 	width: 25%;
 	padding: 10px;
 	font-size: 25px;
 }
 
-#contact-foot{
+#contact-foot {
 	background-color: #232A5C;
 }
 
-footer > .logo > .anchor-footer  {
+footer > .logo > .anchor-footer {
 	height: 15px;
 	width: 15px;
 }
@@ -331,6 +344,10 @@ footer > .logo > .anchor-footer  {
 
 	main {
 		min-height: 100vh;
+	}
+
+	.nav-list {
+		gap: 8px;
 	}
 
 	#home {
@@ -421,16 +438,7 @@ footer > .logo > .anchor-footer  {
 		margin-top: 0;
 	}
 	
-	/* #contact-main > h2 {
-		font-size: 40px;
-	} */
-	
 	#contact-main {
-		/* display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100vh;
-		margin-top: 90px; */
 		display: none;
 	}
 
@@ -471,49 +479,6 @@ footer > .logo > .anchor-footer  {
 		text-decoration: underline;
 		font-size: 1.4rem;
 	}
-
-	
-	/* form {
-		margin-top: -30px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	} */
-	
-	/* #subject {
-		width: 70vw;
-		text-align: left;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 10px;
-	} */
-	
-	/* textarea{
-		width: 70vw;
-		height: 50vh;
-		color: black;
-		text-align: left;
-		font-size: 16px;
-		border: none;
-	} */
-	
-	/* textarea::placeholder{
-		text-align: center;
-		font-size: 30px;
-		
-	} */
-	
-	/* #subject::placeholder{
-		font-size: 24px;
-	} */
-	
-	/* input[type="submit"]{
-		background-color: #fd7702;
-		border: none;
-		width: 50%;
-		padding: 10px;
-		font-size: 24px;
-	} */
 	
 	footer {
 		font-size: 1.125rem;
