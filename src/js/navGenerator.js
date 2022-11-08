@@ -10,7 +10,7 @@ window.onload = () => {
                     <div class="nav-list">
                         <a href="./index.html" id="index-nav">Home</a>
                         <a href="./about.html" id="about-nav">About</a>
-                        <a href="./contact.html" id="contac-nav">Contact</a>
+                        <a href="./contact.html" id="contact-nav">Contact</a>
                     </div>
                 </nav>
             </header>`
