@@ -1,4 +1,13 @@
+const deleteSection = () => {
+	const colorSection = document.getElementById('color-section');
+	if (colorSection) {
+		colorSection.remove();
+	}
+};
+
 const createComponents = (colorPalletes) => {
+	deleteSection();
+
 	const colorSection = document.createElement('section');
 	colorSection.setAttribute('id', 'color-section');
 

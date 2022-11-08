@@ -133,11 +133,7 @@ input[type="text"] {
 	padding: 4px;
 }
 
-.boat-gif {
-	display: none;
-}
-
-.about-gif {
+.gif {
 	display: none;
 }
 
@@ -151,7 +147,8 @@ input[type="text"] {
 	justify-content: center;
 	align-items: center;
 	height: min-content;
-	padding-bottom: 10px;
+	padding-bottom: 60px;
+	padding-top: 40px;
 }
 
 .palette-name {
@@ -219,11 +216,15 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 20px;
+	width: 60vw;
 	background-color: var(--blue-100);
 }
 
 /* CONTACT */
+
+#contact-mobile {
+	display: none;
+}
 
 #contact-bod { 	
 	background-image: linear-gradient(#dbd7d7, #38769081);
@@ -246,7 +247,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 82.8vh;
+	height: 100vh;
 }
 
 form {
@@ -353,14 +354,13 @@ footer > .logo > .anchor-footer  {
 		align-items: center;
 		text-align: center;
 		margin-bottom: 42px;
-		margin-top: 75px;
 	}
 
 	.home-text > .title {
 		color: var(--orange);
 		font-size: 3.5rem;
-		margin-top: 3.5rem;
 		margin-bottom: 0;
+		margin-top: 140px;
 	}
 
 	.home-text > .byline {
@@ -411,13 +411,6 @@ footer > .logo > .anchor-footer  {
 		margin-bottom: 0;
 	}
 
-	.boat-gif {
-		display: block;
-		width: 300px;
-		height: 300px;
-		margin: auto
-	}
-
 	/* CONTACT */
 	#contact-bod{ 	
 		background-color: var(--blue-100);
@@ -426,67 +419,123 @@ footer > .logo > .anchor-footer  {
 
 	#contact-header{
 		background-color: var(--blue-100);
-		margin-bottom: 15px;
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 	
-	#contact-main > h2 {
+	/* #contact-main > h2 {
 		font-size: 40px;
-	}
+	} */
 	
 	#contact-main {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
 		align-items: center;
 		min-height: 100vh;
-		margin-top: 90px;
+		margin-top: 90px; */
+		display: none;
 	}
+
+	#contact-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 140px;
+	}
+
+	.text-content {
+		max-width: 45ch;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: min-content;
+		
+	}
+
+	.text-content > h1 {
+		font-size: 3.5rem;
+		text-align: center;
+		color: var(--orange);
+		margin-bottom: 10px;
+		margin-top: 140px;
+	}
+
+	.text-content > p {
+		font-size: 1.3rem;
+		font-family: 'PT Sans', sans-serif;
+		text-align: center;
+	}
+
+	.text-content > p > .mail-link {
+		font-family: 'PT Sans', sans-serif;
+		color: var(--blue-50);
+		text-transform: none;
+		text-decoration: underline;
+		font-size: 1.4rem;
+	}
+
 	
-	form {
+	/* form {
 		margin-top: -30px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
+	} */
 	
-	#subject {
+	/* #subject {
 		width: 70vw;
 		text-align: left;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		margin-bottom: 10px;
-	}
+	} */
 	
-	textarea{
+	/* textarea{
 		width: 70vw;
 		height: 50vh;
 		color: black;
 		text-align: left;
 		font-size: 16px;
 		border: none;
-	}
+	} */
 	
-	textarea::placeholder{
+	/* textarea::placeholder{
 		text-align: center;
 		font-size: 30px;
 		
-	}
+	} */
 	
-	#subject::placeholder{
+	/* #subject::placeholder{
 		font-size: 24px;
-	}
+	} */
 	
-	input[type="submit"]{
+	/* input[type="submit"]{
 		background-color: #fd7702;
 		border: none;
 		width: 50%;
 		padding: 10px;
 		font-size: 24px;
-	}
+	} */
 	
 	footer {
 		font-size: 1.125rem;
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+
+	footer > .wrapper {
+		width: 90%;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+	}
+
+	footer > .generated-colors {
+		justify-content: space-between;
 	}
 
 	footer > .logo > img {
@@ -496,7 +545,7 @@ footer > .logo > .anchor-footer  {
 
 	#about {
 		min-height: 100vh;
-		margin:	90px 10px 0;
+		margin:	0 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -511,6 +560,7 @@ footer > .logo > .anchor-footer  {
 		font-size: 3.5rem;
 		color: var(--orange);
 		margin-bottom: 10px;
+		margin-top: 140px;
 	}
 
 	#about > .about-text > .text-container {
@@ -522,10 +572,18 @@ footer > .logo > .anchor-footer  {
 		font-family: 'PT Sans', sans-serif;
 	}
 
-	.about-gif {
+	.gif {
 		display: block;
 		width: 300px;
 		height: 300px;
-		margin-top: 50px;
+		margin: 0 auto;
+	}
+
+	.boat-gif {
+		margin-top: 60px;
+	}
+
+	.about-gif {
+		margin-top: 90px;
 	}
 }
