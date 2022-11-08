@@ -17,5 +17,7 @@ window.onload = () => {
 	);
 
 	const fileName = location.href.split('/').slice(-1)[0].split('.')[0];
-	document.getElementById(`${fileName}-nav`).classList.add('inuse');
+	fileName == ''
+		? document.getElementById(`index-nav`).classList.add('inuse')
+		: document.getElementById(`${fileName}-nav`).classList.add('inuse');
 };
