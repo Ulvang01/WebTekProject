@@ -23,12 +23,20 @@ const colorPalletes = {
 };
 
 document.getElementById('submit-btn').onclick = () => {
-	const footerWrapper = document.querySelector('.wrapper');
-	if (!footerWrapper.classList.contains('generated-colors')) {
-		footerWrapper.classList.add('generated-colors');
-		footerWrapper.innerHTML += `<a href="#home">Back to the top</a>`;
-	}
-
 	createComponents(colorPalletes);
 	document.getElementById('color-section').scrollIntoView();
+
+	document.body.insertAdjacentHTML(
+		'beforeend',
+		`
+		<footer class="index-footer">
+			<div class="wrapper">
+				<div class="logo">
+					<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
+					<p>Color<span class="logo-text">Ocean</span></p>
+				</div>
+				<a href="#home">Back to the top</a>
+			</div>
+		</footer>`
+	);
 };

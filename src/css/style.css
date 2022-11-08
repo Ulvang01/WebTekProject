@@ -52,7 +52,6 @@ h1 {
 a {
 	text-decoration: none;
 	color: var(--white);
-	text-transform: uppercase;
 }
 
 /* NAV BAR */
@@ -493,12 +492,8 @@ footer > .wrapper > .logo > .anchor-footer {
 	footer > .wrapper {
 		width: 90%;
 		display: flex;
-		justify-content: start;
-		align-items: center;
-	}
-
-	footer > .generated-colors {
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	footer > .logo > img {
