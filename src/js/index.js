@@ -29,13 +29,13 @@ document.getElementById('submit-btn').onclick = () => {
 	document.body.insertAdjacentHTML(
 		'beforeend',
 		`
-		<footer class="index-footer">
+		<footer>
 			<div class="wrapper">
 				<div class="logo">
 					<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
 					<p>Color<span class="logo-text">Ocean</span></p>
 				</div>
-				<a href="#home">Back to the top</a>
+				<a href="#home" id="back-to-top">Back to the top</a>
 			</div>
 		</footer>`
 	);
