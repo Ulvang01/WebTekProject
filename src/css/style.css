@@ -306,9 +306,9 @@ textarea::placeholder {
 	background-color: var(--blue-200);
 }
 
-footer > .logo > .anchor-footer {
-	height: 15px;
-	width: 15px;
+.anchor-footer {
+	height: 16px;
+	width: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -338,8 +338,8 @@ footer > .logo > .anchor-footer {
 	}
 
 	nav > .logo > .anchor {
-		height: 18px;
-		width: 18px;
+		height: 20px;
+		width: auto;
 	}
 
 	main {
