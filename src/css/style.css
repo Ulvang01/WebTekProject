@@ -243,7 +243,7 @@ footer {
 	color: #f9f7f7;
 }
 
-#contact-main{
+#contact-main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -265,7 +265,7 @@ form {
 	margin-bottom: 10px;
 }
 
-textarea{
+textarea {
 	width: 40vw;
 	color: black;
 	text-align: left;
@@ -273,27 +273,27 @@ textarea{
 	border: none;
 }
 
-textarea::placeholder{
+textarea::placeholder {
 	font-size: 20px;
 }
 
-#subject::placeholder{
+#subject::placeholder {
 	font-size: 18px;
 }
 
-input[type="submit"]{
-	background-color: var(--orane);
+#submit {
+	background-color: var(--orange);
 	border: none;
 	width: 25%;
 	padding: 10px;
 	font-size: 25px;
 }
 
-#contact-foot{
+#contact-foot {
 	background-color: #232A5C;
 }
 
-footer > .logo > .anchor-footer  {
+footer > .logo > .anchor-footer {
 	height: 15px;
 	width: 15px;
 }
