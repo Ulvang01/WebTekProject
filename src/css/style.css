@@ -282,7 +282,7 @@ textarea::placeholder{
 }
 
 input[type="submit"]{
-	background-color: #fd7702;
+	background-color: var(--orane);
 	border: none;
 	width: 25%;
 	padding: 10px;
