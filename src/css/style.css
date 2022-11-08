@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
+/* TODO: 
+	* Change background color
+	* Expand gap in nav link on desktop
+
+
+*/
+
 * {
 	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 	color: var(--white);
@@ -67,7 +74,7 @@ nav {
 .nav-list {
 	display: flex;
 	list-style: none;
-	gap: 8px;
+	gap: 20px;
 }
 
 
@@ -331,6 +338,10 @@ footer > .logo > .anchor-footer {
 
 	main {
 		min-height: 100vh;
+	}
+
+	.nav-list {
+		gap: 8px;
 	}
 
 	#home {
