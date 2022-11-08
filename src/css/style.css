@@ -274,9 +274,7 @@ textarea{
 }
 
 textarea::placeholder{
-	text-align: center;
 	font-size: 20px;
-	padding: 14.5% 0;
 }
 
 #subject::placeholder{
