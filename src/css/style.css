@@ -88,7 +88,7 @@ nav {
 
 .anchor {
 	height: 20px;
-	width: 20px;
+	width: auto;
 }
 
 .logo-text {
@@ -306,9 +306,9 @@ textarea::placeholder {
 	background-color: #232A5C;
 }
 
-footer > .logo > .anchor-footer {
-	height: 15px;
-	width: 15px;
+footer > .wrapper > .logo > .anchor-footer {
+	height: 16px;
+	width: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -338,8 +338,8 @@ footer > .logo > .anchor-footer {
 	}
 
 	nav > .logo > .anchor {
-		height: 18px;
-		width: 18px;
+		height: 20px;
+		width: auto;
 	}
 
 	main {
