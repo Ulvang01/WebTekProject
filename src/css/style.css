@@ -421,16 +421,7 @@ footer > .logo > .anchor-footer  {
 		margin-top: 0;
 	}
 	
-	/* #contact-main > h2 {
-		font-size: 40px;
-	} */
-	
 	#contact-main {
-		/* display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100vh;
-		margin-top: 90px; */
 		display: none;
 	}
 
@@ -471,49 +462,6 @@ footer > .logo > .anchor-footer  {
 		text-decoration: underline;
 		font-size: 1.4rem;
 	}
-
-	
-	/* form {
-		margin-top: -30px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	} */
-	
-	/* #subject {
-		width: 70vw;
-		text-align: left;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 10px;
-	} */
-	
-	/* textarea{
-		width: 70vw;
-		height: 50vh;
-		color: black;
-		text-align: left;
-		font-size: 16px;
-		border: none;
-	} */
-	
-	/* textarea::placeholder{
-		text-align: center;
-		font-size: 30px;
-		
-	} */
-	
-	/* #subject::placeholder{
-		font-size: 24px;
-	} */
-	
-	/* input[type="submit"]{
-		background-color: #fd7702;
-		border: none;
-		width: 50%;
-		padding: 10px;
-		font-size: 24px;
-	} */
 	
 	footer {
 		font-size: 1.125rem;
