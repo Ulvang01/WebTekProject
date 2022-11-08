@@ -4,46 +4,63 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Contact us • Color Ocean</title>
 		<link rel="icon" href="https://fav.farm/⛵️" />
-		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/transitions.css" />
+		<title>Contact us • Color Ocean</title>
 	</head>
-	<body id="contactBod">
-		<header id="contactHeader">
+	<body id="contact-bod">
+		<header id="contact-header">
 			<nav>
-				<p class="logo">
-					<span>Logo</span>
-					Color Ocean
-				</p>
+				<div class="logo">
+					<img src="./img/anchor.svg" alt="anchor" class="anchor" />
+					<p>Color<span class="logo-text">Ocean</span></p>
+				</div>
 				<div class="nav-list">
 					<a href="./index.html">Home</a>
 					<a href="./about.html">About</a>
+					<a href="./contact.html" class="inuse">Contact</a>
 				</div>
 			</nav>
 		</header>
-
-		<main id="contactMain">
+		<main id="contact-main">
 			<h2>Contact us</h2>
 
 			<form action="./" method="post">
 				<div class="inputs">
-                	<input type="text" name="subject" id="subject" required placeholder="Subject">
+					<input
+						type="text"
+						name="subject"
+						id="subject"
+						required
+						placeholder="Subject"
+					/>
 				</div>
 				<div>
-					<textarea name="problem" id="problem" cols="30" rows="10" required placeholder="Tell us about the problem" style="resize: none;"></textarea>
+					<textarea
+						name="problem"
+						id="problem"
+						cols="30"
+						rows="10"
+						required
+						placeholder="Tell us about the problem"
+						style="resize: none"
+					></textarea>
 				</div>
-
-				<input type="submit" id="submit" value="Submit">
+				<button type="submit" id="submit">Submit</button>
 			</form>
-			
 		</main>
-		<footer id="contactFoot">
-			<p class="logo">
-				<span>Logo</span>
-				Color Ocean
-			</p>
-			<a href="./contact.html">Contact</a>
-			<a href="#home">Back to the top</a>
-		</footer>
+		<main id="contact-mobile">
+			<div class="text-content">
+				<h1>Contact us</h1>
+				<p>
+					You can reach us at
+					<a href="mailto:contact@postman.com" class="mail-link"
+						>contact@postman.com</a
+					>
+				</p>
+			</div>
+			<img src="./img/postman.gif" alt="postman" class="gif contact-gif" />
+		</main>
 	</body>
 </html>
