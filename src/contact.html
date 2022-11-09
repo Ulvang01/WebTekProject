@@ -24,32 +24,36 @@
 			</nav>
 		</header>
 		<main id="contact-main">
-			<h2>Contact us</h2>
+			<div class="container">
+				<h2>Contact us</h2>
+	
+				<form action="./" method="post">
+					<div class="inputs">
+						<input
+							type="text"
+							name="subject"
+							id="subject"
+							required
+							placeholder="Subject"
+						/>
+					</div>
 
-			<form action="./" method="post">
-				<div class="inputs">
-					<input
-						type="text"
-						name="subject"
-						id="subject"
-						required
-						placeholder="Subject"
-					/>
-				</div>
-				<div>
-					<textarea
-						name="problem"
-						id="problem"
-						cols="30"
-						rows="10"
-						required
-						placeholder="Tell us about the problem"
-						style="resize: none"
-					></textarea>
-				</div>
-				<button type="submit" id="submit">Submit</button>
-			</form>
-			<img src="img/contact.gif" alt="people">
+					<div>
+						<textarea
+							name="problem"
+							id="problem"
+							cols="30"
+							rows="10"
+							required
+							placeholder="Tell us about the problem"
+							style="resize: none"
+						></textarea>
+					</div>
+					
+					<button type="submit" id="submit">Submit</button>
+				</form>
+			</div>
+			<img id="waveImg" src="./img/wave@1x.svg">
 		</main>
 		<main id="contact-mobile">
 			<div class="text-content">

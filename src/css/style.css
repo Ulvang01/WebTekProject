@@ -240,9 +240,15 @@ footer {
 	display: none;
 }
 
-#contact-bod { 	
-	background-image: linear-gradient(var(--blue-50), var(--blue-150));
-	
+#contact-main > .container {
+	z-index: 10;
+}
+
+#waveImg{
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: auto;
 }
 
 #contact-header {
@@ -251,10 +257,10 @@ footer {
 	margin-top: -15px;
 }
 
-#contact-main > h2 {
+#contact-main > .container > h2 {
 	font-size: 50px;
-	margin-top: -3px;
-	color: var(--white);
+	margin: 0 0 40px;
+	color: var(--orange);
 }
 
 #contact-main {
@@ -305,6 +311,7 @@ textarea::placeholder {
 	padding: 10px;
 	font-size: 25px;
 	transition: 0.4s;
+	margin-top: 20px;
 }
 
 #submit:hover {
