@@ -1,5 +1,5 @@
-@import 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap';
-@import 'https://fonts.googleapis.com/css2?family=PT+Sans&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 /* TODO: 
 
@@ -42,7 +42,7 @@ html {
 body {
 	height: 100%;
 	width: 100%;
-	background-color: var(--);
+	background-color: var(--blue-100);
 }
 
 h1 {
@@ -96,6 +96,7 @@ nav > .logo > .anchor {
 	gap: 20px;
 }
 
+
 /* LOGO */
 
 .anchor {
@@ -123,6 +124,7 @@ main {
 #home {
 	min-height: 100vh;
 	position: relative;
+	background-color: var(--blue-100);
 }
 
 .button-container {
@@ -161,25 +163,31 @@ main {
 	border: none;
 	outline: none;
 	border-radius: 10px;
-	width: 200px;
+	width: 190px;
 	padding: 10px 0;
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 #submit-btn > .anchor {
-	height: 30px;
+	height: 24px;
 	width: auto;
 }
 
-.content {
-	height: 100%;
+#home > .content {
+	display: flex;
+	justify-content: center;
+}
+
+#home > .content > .container {
+	margin-top: 140px;
+	z-index: 10;
 }
 
 #submit-btn:hover {
 	cursor: pointer;
 }
 
-input[type='text'] {
+input[type="text"] {
 	outline: none;
 }
 
@@ -189,10 +197,10 @@ input[type='text'] {
 	align-items: center;
 	color: var(--white);
 	background-color: var(--blue-200);
-	font-size: 2.5rem;
+	font-size: 2rem;
 	border: none;
 	border-radius: 10px;
-	width: 200px;
+	width: 190px;
 	padding: 10px 0;
 }
 
@@ -202,21 +210,27 @@ input[type='text'] {
 
 #waveImg {
 	position: absolute;
-	bottom: 1;
+	bottom: 0;
 	width: 100vw;
-	height: 50vh;
+	height: auto;
+	z-index: 0;
 }
 
 .home-text {
 	font-size: 50px;
 	text-align: center;
+	margin: 0 0 30px;
 }
+
 .title {
 	color: var(--orange);
+	font-size: 5rem;
+	margin: 0;
 }
 
 .byline {
 	color: var(--white);
+	margin: 10px 0;
 }
 
 span {
@@ -302,11 +316,26 @@ input[type='text'] {
 /* FOOTER */
 
 footer {
+	font-size: 1.125rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--blue-100);
+}
+
+footer > .wrapper {
+	width: 95%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 60vw;
-	background-color: var(--blue-100);
+}
+
+footer > .logo > img {
+	height: 18px;
+	width: 18px;
 }
 
 /* CONTACT */
@@ -315,8 +344,9 @@ footer {
 	display: none;
 }
 
-#contact-bod {
+#contact-bod { 	
 	background-image: linear-gradient(#dbd7d7, #38769081);
+	
 }
 
 #contact-header {
@@ -378,7 +408,7 @@ textarea::placeholder {
 }
 
 #contact-foot {
-	background-color: #232a5c;
+	background-color: #232A5C;
 }
 
 footer > .wrapper > .logo > .anchor-footer {
@@ -401,6 +431,8 @@ footer > .wrapper > .logo > .anchor-footer {
 		height: 75px;
 		position: fixed;
 		z-index: 100;
+		top: 0;
+		display: block;
 	}
 
 	nav {
@@ -432,12 +464,14 @@ footer > .wrapper > .logo > .anchor-footer {
 		min-height: 100vh;
 	}
 	
-	#home > .content {
+	#home > .content > .container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+		height: auto;
+		margin-top: 0;
 	}
 
 	.home-text > h1 {
@@ -509,17 +543,17 @@ footer > .wrapper > .logo > .anchor-footer {
 	}
 
 	/* CONTACT */
-	#contact-bod {
+	#contact-bod{ 	
 		background-color: var(--blue-100);
 		background-image: none;
 	}
 
-	#contact-header {
+	#contact-header{
 		background-color: var(--blue-100);
 		margin-bottom: 0;
 		margin-top: 0;
 	}
-
+	
 	#contact-main {
 		display: none;
 	}
@@ -537,6 +571,7 @@ footer > .wrapper > .logo > .anchor-footer {
 		flex-direction: column;
 		align-items: center;
 		height: min-content;
+		
 	}
 
 	.text-content > h1 {
@@ -560,7 +595,7 @@ footer > .wrapper > .logo > .anchor-footer {
 		text-decoration: underline;
 		font-size: 1.4rem;
 	}
-
+	
 	footer {
 		font-size: 1.125rem;
 		display: flex;
@@ -585,7 +620,7 @@ footer > .wrapper > .logo > .anchor-footer {
 
 	#about {
 		min-height: 100vh;
-		margin: 0 10px;
+		margin:	0 10px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -621,6 +656,10 @@ footer > .wrapper > .logo > .anchor-footer {
 
 	.boat-gif {
 		margin-top: 60px;
+	}
+
+	#waveImg {
+		display: none;
 	}
 
 	.about-gif {
