@@ -159,11 +159,6 @@ main {
 	text-align: center;
 }
 
-#home > .content > .container {
-	margin-top: 140px;
-	z-index: 10;
-}
-
 #submit-btn:hover {
 	cursor: pointer;
 }
