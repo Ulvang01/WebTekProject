@@ -203,6 +203,7 @@ input[type="text"] {
 	border-radius: 10px;
 	width: 190px;
 	padding: 10px 0;
+	text-align: center;
 }
 
 .gif {
@@ -297,17 +298,6 @@ span {
 	width: 100px;
 	border-radius: 10%;
 	border: 1.5px solid rgb(0 0 0 / 30%);
-}
-
-input[type='text'] {
-	text-align: center;
-	border: none;
-	width: 100px;
-	padding: 2px;
-	border-radius: 2%;
-	background-color: var(--white);
-	color: rgb(0 0 0 / 50%);
-	font-size: 1.5rem;
 }
 
 #about {
