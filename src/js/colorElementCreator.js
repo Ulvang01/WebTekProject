@@ -40,6 +40,7 @@ const createComponents = (colorPalletes) => {
 			colorFrame.appendChild(colorCode);
 			colorBox.appendChild(colorFrame);
 		});
+
 		colorContainer.appendChild(colorBox);
 		colorSection.appendChild(colorContainer);
 	}
