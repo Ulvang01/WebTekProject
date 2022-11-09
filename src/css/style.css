@@ -564,6 +564,14 @@ textarea::placeholder {
 		width: 20px;
 	}
 
+	.palette-name {
+		color: var(--text-black);
+		margin-bottom: 40px;
+		font-size: 2.3rem;
+		filter: none;
+		text-align: center;
+	}
+
 	.color-box {
 		flex-direction: column;
 		gap: 6px;
@@ -683,9 +691,5 @@ textarea::placeholder {
 
 	#wave-img {
 		display: none;
-	}
-
-	.about-gif {
-		margin-top: 90px;
 	}
 }
