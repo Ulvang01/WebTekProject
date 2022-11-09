@@ -396,70 +396,70 @@ const schemes = {
 const generatePalettes = (hex) => {
 	const palette1 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.triadic(hex);
 		}
 	};
 
 	const palette2 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.tetradic(hex);
 		}
 	};
 
 	const palette3 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.analogous(hex, 150, 5);
 		}
 	};
 
 	const palette4 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.analogous(hex, -150, 5);
 		}
 	};
 
 	const palette5 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.monochromatic(hex, 20, 5).sort();
 		}
 	};
 
 	const palette6 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.splitComplementary(hex);
 		}
 	};
 
 	const palette7 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.compound(hex);
 		}
 	};
 
 	const palette8 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.shades(hex).sort();
 		}
 	};
 
 	const palette9 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			this.colors = schemes.shadesOfGray(hex).sort();
 		}
 	};
 
 	const palette10 = {
 		colors: [],
-		generate: function () {
+		generate: function (hex) {
 			let newcolors = [hex];
 			let currentColor = colors.blackNorWhite(hex);
 
@@ -478,6 +478,9 @@ const generatePalettes = (hex) => {
 		}
 	};
 
+	palette10.generate(hex);
+	palette10.colors;
+
 	return {
 		Triadic: palette1.colors,
 		Tetradic: palette2.colors,
@@ -493,3 +496,20 @@ const generatePalettes = (hex) => {
 };
 
 export default generatePalettes;
+
+export default class paletteGenerator {
+	constructor(hex) {
+		this.hex = hex;
+		this.palettes = {};
+	}
+
+	generateTriadic() {
+		this.palettes['Triadic'] = schemes.triadic(this.hex);
+	}
+
+	generate() {
+		this.generateTriadic();
+		this.gener
+		return this.palettes;
+	}
+}

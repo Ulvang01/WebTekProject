@@ -1,31 +1,42 @@
-/* Getting the elements from the HTML file. */
-const nameContainer = document.getElementById('name-container');
-const changeNameButton = document.getElementById('change-name');
+import changeColor from './colorInputHandler.js';
+import createComponents from './colorElementCreator.js';
 
-/* Creating an array of names. */
-const names = ['Edvard', 'Leif', 'Christoffer', 'Scott', 'Simon', 'Sepanta'];
+document.getElementById('color-input').oninput = () => changeColor();
 
-/**
- * Generate a random name from a list of names.
- * @param names - An array of names to choose from.
- * @returns A random name from the array.
- */
-const generateName = (names) => {
-	const index = Math.floor(Math.random() * names.length);
-	return names[index];
+const colorPalletes = {
+	'Palette 1': [
+		'#F9F7F7',
+		'#FD7702',
+		'#65C6C4',
+		'#408AB4',
+		'#34699A',
+		'#112D4E'
+	],
+	'Palette 2': [
+		'#F9F871',
+		'#FFC75F',
+		'#FF9671',
+		'#FF6F91',
+		'#D65DB1',
+		'#845EC2'
+	]
 };
 
-/**
- * It takes an array of names, generates a random name from that array, and then displays that name in
- * the HTML
- * @param names - an array of names
- */
-const displayName = (names) => {
-	let name = generateName(names);
-	nameContainer.innerHTML = name;
-};
+document.getElementById('submit-btn').onclick = () => {
+	createComponents(colorPalletes);
+	document.getElementById('color-section').scrollIntoView();
 
-/* An event listener that listens for a click on the button and then runs the function displayName. */
-changeNameButton.onclick = () => {
-	displayName(names);
+	document.body.insertAdjacentHTML(
+		'beforeend',
+		`
+		<footer>
+			<div class="wrapper">
+				<div class="logo">
+					<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
+					<p>Color<span class="logo-text">Ocean</span></p>
+				</div>
+				<a href="#home" id="back-to-top">Back to the top</a>
+			</div>
+		</footer>`
+	);
 };
