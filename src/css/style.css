@@ -579,14 +579,6 @@ textarea::placeholder {
 		margin-bottom: 0;
 	}
 
-	.palette-name {
-		text-align: center;
-		color: var(--text-black);
-		margin-bottom: 40px;
-		font-size: 2.3rem;
-		filter: none;
-	}
-
 	/* CONTACT */
 	#contact-bod {
 		background-color: var(--blue-100);
@@ -691,5 +683,9 @@ textarea::placeholder {
 
 	#wave-img {
 		display: none;
+	}
+
+	.about-gif {
+		margin-top: 90px;
 	}
 }
