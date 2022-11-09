@@ -254,7 +254,7 @@ footer {
 #contact-main > h2 {
 	font-size: 50px;
 	margin-top: -3px;
-	color: var(--white);
+	color: var(--orange);
 }
 
 #contact-main {
@@ -277,14 +277,16 @@ form {
 	padding-top: 7px;
 	padding-bottom: 7px;
 	margin-bottom: 10px;
+	font-size: 18px;
 }
 
 textarea {
 	width: 40vw;
 	color: var(--text-black);
 	text-align: left;
-	font-size: 16px;
+	font-size: 20px;
 	border: none;
+	outline: none;
 }
 
 textarea::placeholder {
@@ -297,10 +299,18 @@ textarea::placeholder {
 
 #submit {
 	background-color: var(--orange);
-	border: none;
+	border: 1px;
+	border-radius: 3px;
 	width: 25%;
 	padding: 10px;
 	font-size: 25px;
+	transition: 0.4s;
+}
+
+#submit:hover {
+	cursor: pointer;
+	background-color: var(--blue-50);
+	
 }
 
 #contact-foot {
