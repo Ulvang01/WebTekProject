@@ -230,14 +230,14 @@ span {
 	justify-content: center;
 	align-items: center;
 	height: min-content;
-	padding-bottom: 60px;
+	padding-bottom: 100px;
 	padding-top: 40px;
 }
 
 .palette-name {
 	color: var(--text-black);
 	margin-bottom: 40px;
-	font-size: 2rem;
+	font-size: 3rem;
 }
 
 .color-container {
@@ -272,16 +272,27 @@ span {
 }
 
 .color {
-	height: 100px;
-	width: 100px;
+	height: 8vw;
+	width: 8vw;
 	border-radius: 10%;
 	border: 1.5px solid rgb(0 0 0 / 30%);
+}
+
+.color-code-input{
+	text-align: center;
+	border: none;
+	width: 100px;
+	padding: 2px;
+	border-radius: 2%;
+	background-color: var(--white);
+	color: rgb(0 0 0 / 50%);
+	font-size: 1.75rem;
 }
 
 /* FOOTER */
 
 footer {
-	font-size: 1.125rem;
+	font-size: 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -298,9 +309,9 @@ footer > .wrapper {
 	align-items: center;
 }
 
-footer > .logo > img {
-	height: 18px;
-	width: 18px;
+footer > .wrapper > .logo > .anchor-footer {
+	width: 21px;
+	height: auto;
 }
 
 /* CONTACT */
@@ -384,11 +395,6 @@ textarea::placeholder {
 #submit:hover {
 	cursor: pointer;
 	background-color: var(--blue-50);
-}
-
-footer > .wrapper > .logo > .anchor-footer {
-	height: 16px;
-	width: auto;
 }
 
 /* ABOUT */

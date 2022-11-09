@@ -33,6 +33,7 @@ const createComponents = (colorPalletes) => {
 			colorFrame.appendChild(colorDiv);
 
 			const colorCode = document.createElement('input');
+			colorCode.setAttribute('class', 'color-code-input');
 			colorCode.setAttribute('type', 'text');
 			colorCode.setAttribute('value', color);
 			colorCode.readOnly = true;
