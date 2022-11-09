@@ -14,17 +14,27 @@ document.getElementById('submit-btn').onclick = () => {
 	createComponents(colorGenerator.palettes);
 	document.getElementById('color-section').scrollIntoView();
 
-	document.body.insertAdjacentHTML(
-		'beforeend',
-		`
-		<footer>
-			<div class="wrapper">
-				<div class="logo">
-					<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
-					<p>Color<span class="logo-text">Ocean</span></p>
+	if (!document.querySelector('footer')) {
+		document.body.insertAdjacentHTML(
+			'beforeend',
+			`
+			<footer>
+				<div class="wrapper">
+					<div class="logo">
+						<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
+						<p>Color<span class="logo-text">Ocean</span></p>
+					</div>
+					<a href="#home" id="back-to-top">Back to the top</a>
 				</div>
-				<a href="#home" id="back-to-top">Back to the top</a>
-			</div>
-		</footer>`
-	);
+			</footer>`
+		);
+	}
+
+	window.onscroll = () => {
+		if (window.scrollY <= 0) {
+			document.querySelector('footer').style.display = 'none';
+		} else {
+			document.querySelector('footer').style.display = 'flex';
+		}
+	}
 };
