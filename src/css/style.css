@@ -346,14 +346,9 @@ footer > .logo > img {
 }
 
 #contact-main > .container {
+	margin-top: 100px;
 	z-index: 10;
-}
-
-#waveImg{
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
-	height: auto;
+	text-align: center;
 }
 
 #contact-header {
@@ -363,8 +358,8 @@ footer > .logo > img {
 }
 
 #contact-main > .container > h2 {
-	font-size: 50px;
-	margin: 0 0 40px;
+	font-size: 4rem;
+	margin: 0 0 10px;
 	color: var(--orange);
 }
 
@@ -376,10 +371,15 @@ footer > .logo > img {
 }
 
 form {
-	margin-top: -30px;
+/* 	margin-top: -30px;*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+form > #inputs {
+	padding: 40px;
+	backdrop-filter: blur(10px);
 }
 
 #subject {
