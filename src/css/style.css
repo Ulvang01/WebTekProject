@@ -313,10 +313,6 @@ textarea::placeholder {
 	
 }
 
-#contact-foot {
-	background-color: var(--blue-200);
-}
-
 .anchor-footer {
 	height: 16px;
 	width: auto;
