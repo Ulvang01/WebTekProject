@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--white);
@@ -89,7 +91,8 @@ main {
 }
 
 #home {
-	height: 90vh;
+	height: 92vh;
+	position: relative;
 }
 
 .button-container {
@@ -112,6 +115,13 @@ main {
 
 .boat-gif {
 	display: none;
+}
+
+#waveImg {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 50vh;
 }
 
 /*  COLOR SECTION */
