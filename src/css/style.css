@@ -42,6 +42,7 @@ html {
 body {
 	height: 100%;
 	width: 100%;
+	background-color: var(--);
 }
 
 h1 {
@@ -136,6 +137,10 @@ main {
 	gap: 15px;
 }
 
+#submit-btn {
+	font-size: 60px;
+}
+
 .button-container > button {
 	display: flex;
 	align-items: center;
@@ -163,6 +168,8 @@ main {
 	border: none;
 	outline: none;
 	border-radius: 3px;
+	border-radius: 10px;
+	filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 }
 
 #submit-btn:hover {
@@ -178,7 +185,7 @@ input[type="text"] {
 	background-color: var(--blue-200);
 	border: none;
 	border-radius: 3px;
-	padding: 4px;
+	font-size: 60px;
 }
 
 .gif {
@@ -187,10 +194,28 @@ input[type="text"] {
 
 #waveImg {
 	position: absolute;
-	bottom: 0;
+	bottom: 1;
 	width: 100vw;
 	height: 50vh;
 }
+
+.home-text {
+	font-size: 50px;
+	text-align: center;
+}
+.title {
+	color: var(--orange);
+}
+
+.byline {
+	color: var(--white);
+}
+
+span {
+	color: var(--blue-200);
+}
+
+
 
 /*  COLOR SECTION */
 
@@ -204,6 +229,7 @@ input[type="text"] {
 	height: min-content;
 	padding-bottom: 60px;
 	padding-top: 40px;
+	
 }
 
 .palette-name {
@@ -396,6 +422,7 @@ footer > .wrapper > .logo > .anchor-footer {
 		display: grid;
 		grid-template-rows: 1fr 1fr;
 		justify-items: center;
+		height: 100vh;
 	}
 
 	#home > .content {
