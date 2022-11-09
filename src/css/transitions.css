@@ -1,16 +1,15 @@
 main {
-    animation: transition-in 750ms;
-
+	animation: transition-in 750ms;
 }
 
 @keyframes transition-in {
-    from {
-        opacity: 0;
-        transform: rotateX(-10deg);
-    }
-	
-    to {
-        opacity: 1;
-        transform: rotateX(0);
-    }
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
 }
