@@ -404,7 +404,7 @@ footer > .wrapper > .logo > .anchor-footer {
 
 #about {
 	min-height: 100vh;
-	margin:	0 10px;
+	margin: 0 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -430,7 +430,6 @@ footer > .wrapper > .logo > .anchor-footer {
 	font-size: 1.3rem;
 	font-family: 'PT Sans', sans-serif;
 }
-
 
 @media screen and (max-width: 768px) {
 	* {
@@ -636,7 +635,7 @@ footer > .wrapper > .logo > .anchor-footer {
 	#about-main {
 		background-image: none;
 	}
-	
+
 	#about {
 		min-height: 100vh;
 		margin: 0 10px;
