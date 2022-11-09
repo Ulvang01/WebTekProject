@@ -406,6 +406,12 @@ footer > .wrapper > .logo > .anchor-footer {
 
 /* ABOUT */
 
+#about-main {
+	background-image: url('../img/about-wave.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #about {
 	min-height: 100vh;
 	margin:	0 10px;
@@ -638,33 +644,12 @@ footer > .wrapper > .logo > .anchor-footer {
 		width: 18px;
 	}
 
-	#about {
-		min-height: 100vh;
-		margin:	0 10px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	#about-main {
+		background-image: none;
 	}
 
 	#about > .about-text {
-		text-align: center;
 		max-width: 45ch;
-	}
-
-	#about > .about-text > h1 {
-		font-size: 3.5rem;
-		color: var(--orange);
-		margin-bottom: 10px;
-		margin-top: 140px;
-	}
-
-	#about > .about-text > .text-container {
-		text-align: left;
-	}
-
-	#about > .about-text > .text-container > p {
-		font-size: 1.3rem;
-		font-family: 'PT Sans', sans-serif;
 	}
 
 	.gif {
