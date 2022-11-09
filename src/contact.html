@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="https://fav.farm/⛵️" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/transitions.css" />
+		<script src="./js/navGenerator.js" defer></script>
+		<script src="./js/mailHandler.js" defer></script>
+		<title>Contact us • Color Ocean</title>
+	</head>
+	<body id="contact-bod">
+		<main id="contact-main">
+			<div class="container">
+				<h1>Contact us</h1>
+
+				<form action="./">
+					<div class="inputs">
+						<input
+							type="text"
+							name="subject"
+							id="subject"
+							required
+							placeholder="Subject"
+						/>
+					</div>
+
+					<div>
+						<textarea
+							name="problem"
+							id="problem"
+							cols="30"
+							rows="10"
+							required
+							placeholder="Tell us about the problem"
+							style="resize: none"
+						></textarea>
+					</div>
+
+					<button type="submit" id="submit">Submit</button>
+				</form>
+			</div>
+			<img src="./img/wave-contact.svg" id="wave-img" alt="" />
+		</main>
+		<main id="contact-mobile">
+			<div class="text-content">
+				<h1>Contact us</h1>
+				<p>
+					You can reach us at
+					<a href="mailto:contact@postman.com" class="mail-link"
+						>contact@postman.com</a
+					>
+				</p>
+			</div>
+			<img src="./img/postman.gif" alt="postman" class="gif contact-gif" />
+		</main>
+	</body>
+</html>

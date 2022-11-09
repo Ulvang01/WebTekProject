@@ -1,31 +1,43 @@
-/* Getting the elements from the HTML file. */
-const nameContainer = document.getElementById('name-container');
-const changeNameButton = document.getElementById('change-name');
+import changeColor from './colorInputHandler.js';
+import createComponents from './colorElementCreator.js';
+import PaletteGenerator from './paletteGenerator.js';
 
-/* Creating an array of names. */
-const names = ['Edvard', 'Leif', 'Christoffer', 'Scott', 'Simon', 'Sepanta'];
+document.getElementById('color-input').oninput = () => changeColor();
 
-/**
- * Generate a random name from a list of names.
- * @param names - An array of names to choose from.
- * @returns A random name from the array.
- */
-const generateName = (names) => {
-	const index = Math.floor(Math.random() * names.length);
-	return names[index];
-};
+document.getElementById('submit-btn').onclick = () => {
+	const color = document.getElementById('color-input').value;
 
-/**
- * It takes an array of names, generates a random name from that array, and then displays that name in
- * the HTML
- * @param names - an array of names
- */
-const displayName = (names) => {
-	let name = generateName(names);
-	nameContainer.innerHTML = name;
-};
+	if (color.includes('#') && (color.length === 4 || color.length === 7)) {
+		const colorGenerator = new PaletteGenerator(color);
+		colorGenerator.generatePalettes();
 
-/* An event listener that listens for a click on the button and then runs the function displayName. */
-changeNameButton.onclick = () => {
-	displayName(names);
+		createComponents(colorGenerator.palettes);
+		document.getElementById('color-section').scrollIntoView();
+
+		if (!document.querySelector('footer')) {
+			document.body.insertAdjacentHTML(
+				'beforeend',
+				`
+				<footer>
+					<div class="wrapper">
+						<div class="logo">
+							<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
+							<p>Color<span class="logo-text">Ocean</span></p>
+						</div>
+						<a href="#home" id="back-to-top">Back to the top</a>
+					</div>
+				</footer>`
+			);
+		}
+
+		window.onscroll = () => {
+			if (window.scrollY <= 0) {
+				document.querySelector('footer').style.display = 'none';
+			} else {
+				document.querySelector('footer').style.display = 'flex';
+			}
+		};
+	} else {
+		console.error('Please enter a valid color code');
+	}
 };
