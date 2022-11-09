@@ -154,7 +154,6 @@ main {
 }
 
 #contact-main > .container {
-	margin-top: 140px;
 	z-index: 10;
 	text-align: center;
 }
@@ -169,7 +168,6 @@ input[type='text'] {
 }
 
 #home > .content > .container {
-	margin-top: 140px;
 	z-index: 10;
 }
 
@@ -209,6 +207,8 @@ input[type='text'] {
 	color: var(--orange);
 	font-size: 5rem;
 	margin: 0;
+	margin-top: 140px;
+
 }
 
 .byline {
@@ -330,10 +330,11 @@ footer > .wrapper > .logo > .anchor-footer {
 	margin-top: -15px;
 }
 
-#contact-main > .container > h2 {
+#contact-main > .container > h1 {
 	font-size: 4rem;
 	margin: 0 0 10px;
 	color: var(--orange);
+	margin-top: 140px;
 }
 
 #contact-main {
@@ -419,7 +420,7 @@ textarea::placeholder {
 }
 
 #about > .about-text > h1 {
-	font-size: 3.5rem;
+	font-size: 4rem;
 	color: var(--orange);
 	margin-bottom: 10px;
 	margin-top: 140px;
