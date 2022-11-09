@@ -1,4 +1,4 @@
- const changeColor = () => {
+const changeColor = () => {
 	const colorInput = document.getElementById('color-input');
 	const color = colorInput.value;
 	const reg = /^#([0-9a-f]{3}){1,2}$/i;
@@ -18,6 +18,6 @@
 
 	const textColor = colorYIQ >= 100 ? '#2e3440' : '#f9f7f7';
 	colorInput.style.color = textColor;
-}
+};
 
 export default changeColor;
