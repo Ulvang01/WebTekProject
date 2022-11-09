@@ -36,5 +36,5 @@ document.getElementById('submit-btn').onclick = () => {
 		} else {
 			document.querySelector('footer').style.display = 'flex';
 		}
-	}
+	};
 };
