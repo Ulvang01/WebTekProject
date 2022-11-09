@@ -241,7 +241,7 @@ footer {
 }
 
 #contact-bod { 	
-	background-image: linear-gradient(#dbd7d7, #38769081);
+	background-image: linear-gradient(var(--blue-50), var(--blue-150));
 	
 }
 
@@ -254,7 +254,7 @@ footer {
 #contact-main > h2 {
 	font-size: 50px;
 	margin-top: -3px;
-	color: var(--orange);
+	color: var(--white);
 }
 
 #contact-main {
