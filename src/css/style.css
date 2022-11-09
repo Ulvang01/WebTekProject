@@ -1,8 +1,8 @@
+/* stylelint-disable import-notation */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 /* TODO: 
-
 	? * Contact Page
 	* Change background color
 	* Expand gap in nav link on desktop
@@ -77,15 +77,6 @@ nav {
 	align-items: center;
 }
 
-nav > .logo > .anchor {
-	height: 20px;
-	width: auto;
-}
-
-.nav-list {
-	gap: 12px;
-}
-
 .inuse {
 	color: var(--orange);
 }
@@ -100,6 +91,11 @@ nav > .logo > .anchor {
 /* LOGO */
 
 .anchor {
+	height: 20px;
+	width: auto;
+}
+
+nav > .logo > .anchor {
 	height: 20px;
 	width: auto;
 }
@@ -145,20 +141,12 @@ main {
 	border-radius: 3px;
 }
 
-.button-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 15px;
-}
-
 #submit-btn {
 	filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
-	padding: 4px;
 	background-color: var(--orange);
 	border: none;
 	outline: none;
@@ -208,7 +196,7 @@ input[type="text"] {
 	display: none;
 }
 
-#waveImg {
+#wave-img {
 	position: absolute;
 	bottom: 0;
 	width: 100vw;
@@ -690,7 +678,7 @@ footer > .wrapper > .logo > .anchor-footer {
 		margin-top: 60px;
 	}
 
-	#waveImg {
+	#wave-itemsmg {
 		display: none;
 	}
 
