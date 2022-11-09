@@ -3,10 +3,10 @@ window.onload = () => {
 		'afterbegin',
 		`<header>
                 <nav>
-                    <div class="logo">
+                    <a class="logo" href="index.html">
                         <img src="./img/anchor.svg" alt="anchor" class="anchor" />
                         <p>Color<span class="logo-text">Ocean</span></p>
-                    </div>
+                    </a>
                     <div class="nav-list">
                         <a href="./index.html" id="index-nav">Home</a>
                         <a href="./about.html" id="about-nav">About</a>
