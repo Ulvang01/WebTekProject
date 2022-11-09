@@ -297,7 +297,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: static;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	background-color: var(--blue-100);
