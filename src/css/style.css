@@ -169,6 +169,7 @@ main {
 }
 
 input[type='text'] {
+	color: var(--text-black);
 	outline: none;
 }
 
@@ -636,7 +637,7 @@ footer > .wrapper > .logo > .anchor-footer {
 	#about-main {
 		background-image: none;
 	}
-	
+
 	#about {
 		min-height: 100vh;
 		margin: 0 10px;
