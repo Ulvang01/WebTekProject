@@ -529,8 +529,9 @@ textarea::placeholder {
 	}
 
 	#home {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-items: center;
 		min-height: 100vh;
 	}
@@ -541,12 +542,7 @@ textarea::placeholder {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		height: auto;
 		margin-top: 0;
-	}
-
-	.home-text > h1 {
-		color: var(--orange);
 	}
 
 	.home-text {
@@ -554,19 +550,19 @@ textarea::placeholder {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		margin-bottom: 42px;
+		margin-bottom: 20px;
 	}
 
 	.home-text > .title {
 		color: var(--orange);
-		font-size: 3.5rem;
-		margin-bottom: 0;
-		margin-top: 140px;
+		font-size: 3rem;
+		margin: 0;
 		padding: none;
+		margin-top: 100px;
 	}
 
 	.home-text > .byline {
-		font-size: 2.2rem;
+		font-size: 2rem;
 		margin: 0;
 	}
 
@@ -574,28 +570,32 @@ textarea::placeholder {
 		color: var(--blue-50);
 	}
 
+	.button-container {
+		gap: 8px;
+	}
+
 	#color-input {
-		font-size: 1.5rem;
-		padding: 10px 0;
-		width: 140px;
+		font-size: 1.2rem;
+		padding: 8px 0;
+		width: 100px;
 		border-radius: 10px;
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 	}
 
 	#submit-btn {
 		background-color: var(--blue-50);
-		width: 140px;
+		width: 100px;
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
-		font-size: 1.5rem;
-		padding: 10px 0;
+		font-size: 1.2rem;
+		padding: 8px 0;
 		border-radius: 10px;
 		display: flex;
 		justify-content: center;
 	}
 
 	#submit-btn > .anchor {
-		height: 20px;
-		width: 20px;
+		height: 14px;
+		width: 14px;
 	}
 
 	.palette-name {
@@ -641,7 +641,7 @@ textarea::placeholder {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 140px;
+		gap: 100px;
 	}
 
 	.text-content {
@@ -653,11 +653,11 @@ textarea::placeholder {
 	}
 
 	.text-content > h1 {
-		font-size: 3.5rem;
+		font-size: 3rem;
 		text-align: center;
 		color: var(--orange);
 		margin-bottom: 10px;
-		margin-top: 140px;
+		margin-top: 100px;
 	}
 
 	.text-content > p > .mail-link {
@@ -684,15 +684,24 @@ textarea::placeholder {
 		max-width: 45ch;
 	}
 
+	#about > .about-text > h1{
+		margin-top: 100px;
+		font-size: 3rem;
+	}
+
+	#about > .about-text > .text-container > p {
+		font-size: 1rem;
+	}
+
 	.gif {
 		display: block;
-		width: 300px;
-		height: 300px;
+		width: 250px;
+		height: 250px;
 		margin: 0 auto;
 	}
 
 	.boat-gif {
-		margin-top: 60px;
+		margin-top: 40px;
 	}
 
 	#wave-img {
