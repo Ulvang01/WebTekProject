@@ -13,3 +13,48 @@ main {
 		transform: rotateX(0);
 	}
 }
+
+.close {
+	transform: rotate(180deg);
+}
+
+.close > .btn-line:first-child {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.close > .btn-line:nth-child(2) {
+	opacity: 0;
+}
+
+.close > .btn-line:last-child {
+	transform: rotate(-45deg) translate(7px, -6px);
+}
+
+header > nav > .nav-list.fly-in {
+	animation: fly-in 500ms;
+}
+
+@keyframes fly-in {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+header > nav > .nav-list.fly-out {
+	animation: fly-out 500ms;
+}
+
+@keyframes fly-out {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+

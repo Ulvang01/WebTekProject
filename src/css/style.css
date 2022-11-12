@@ -65,6 +65,10 @@ nav {
 	align-items: center;
 }
 
+.menu-btn {
+	display: none;
+}
+
 .inuse {
 	color: var(--orange);
 }
@@ -465,20 +469,37 @@ textarea::placeholder {
 	header {
 		background-color: var(--blue-100);
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
-		height: 75px;
+		height: 60px;
 		position: fixed;
 		z-index: 100;
 		top: 0;
-		display: block;
+		display: flex;
+		justify-content: center;
 	}
 
 	nav {
-		position: relative;
 		width: 90%;
-		top: 70%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		font-size: 1.5rem;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+	
+	header > nav > .nav-list {
+		display: none;
+	}
+
+	header > nav > .nav-list.show {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: fixed;
+		width: 50vw;
+		height: 100vh;
+		top: 60px;
+		right: 0;
+		background-color: var(--blue-150);
+		padding-top: 40px;
 	}
 
 	nav > .logo > .anchor {
@@ -486,12 +507,29 @@ textarea::placeholder {
 		width: auto;
 	}
 
-	main {
-		min-height: 100vh;
+	nav > .logo > p {
+		margin: 0;
 	}
 
-	.nav-list {
-		gap: 8px;
+	.menu-btn {
+		cursor: pointer;
+		transition: all 0.5s ease-out;
+		height: min-content;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.btn-line {
+		width: 26px;
+		height: 3px;
+		background-color: var(--white);
+		transition: all 0.5s ease-out;
+		border-radius: 2px;
+	}
+
+	main {
+		min-height: 100vh;
 	}
 
 	#home {
