@@ -14,27 +14,22 @@ document.getElementById('submit-btn').onclick = () => {
 		createComponents(colorGenerator.palettes);
 		document.getElementById('color-section').scrollIntoView();
 
-		if (!document.querySelector('footer')) {
+		if (!document.querySelector('.back-to-top')) {
 			document.body.insertAdjacentHTML(
 				'beforeend',
 				`
-				<footer>
-					<div class="wrapper">
-						<div class="logo">
-							<img src="./img/anchor.svg" alt="anchor" class="anchor-footer" />
-							<p>Color<span class="logo-text">Ocean</span></p>
-						</div>
-						<a href="#home" id="back-to-top">Back to the top</a>
-					</div>
-				</footer>`
+					<a href="#home" class="back-to-top">
+						<img src="./img/arrow-up.svg" alt="arrow-up" />
+					</a>
+				`
 			);
 		}
 
 		window.onscroll = () => {
 			if (window.scrollY <= 0) {
-				document.querySelector('footer').style.display = 'none';
+				document.querySelector('.back-to-top').style.display = 'none';
 			} else {
-				document.querySelector('footer').style.display = 'flex';
+				document.querySelector('.back-to-top').style.display = 'inline-block';
 			}
 		};
 	} else {
