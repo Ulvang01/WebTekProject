@@ -1,6 +1,6 @@
-import changeColor from './colorInputHandler.js';
-import createComponents from './colorElementCreator.js';
-import PaletteGenerator from './paletteGenerator.js';
+import changeColor from './modules/colorInputHandler.js';
+import createComponents from './modules/colorElementCreator.js';
+import PaletteGenerator from './modules/PaletteGenerator.js';
 
 document.getElementById('color-input').oninput = () => changeColor();
 
