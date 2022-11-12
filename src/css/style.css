@@ -309,7 +309,6 @@ span {
 	height: 36px;
 }
 
-
 /* CONTACT */
 
 #contact-mobile {
@@ -475,7 +474,7 @@ textarea::placeholder {
 		align-items: center;
 		text-align: center;
 	}
-	
+
 	header > nav > .nav-list {
 		display: none;
 	}
@@ -704,7 +703,7 @@ textarea::placeholder {
 		bottom: 15px;
 		right: 15px;
 	}
-	
+
 	.back-to-top > img {
 		padding: 6px;
 		width: 30px;
