@@ -45,6 +45,7 @@ const createComponents = (colorPalletes) => {
 			colorCode.setAttribute('class', 'color-code-input');
 			colorCode.setAttribute('type', 'text');
 			colorCode.setAttribute('value', color);
+			colorCode.setAttribute('onclick', 'this.select()');
 			colorCode.readOnly = true;
 			colorFrame.appendChild(colorCode);
 			colorBox.appendChild(colorFrame);
