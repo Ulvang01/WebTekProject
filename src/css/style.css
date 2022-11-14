@@ -164,7 +164,6 @@ nav > .logo > .anchor {
 #home {
 	min-height: 100vh;
 	position: relative;
-	background-color: var(--blue-100);
 }
 
 #home > .content {
@@ -239,7 +238,7 @@ nav > .logo > .anchor {
 	bottom: 0;
 	width: 100vw;
 	height: auto;
-	z-index: 0;
+	z-index: -1;
 }
 
 .home-text {
@@ -397,6 +396,14 @@ nav > .logo > .anchor {
 	margin-top: -15px;
 }
 
+#contact-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+
 #contact-main > .container > h1 {
 	font-size: 4rem;
 	margin: 0 0 10px;
@@ -404,12 +411,6 @@ nav > .logo > .anchor {
 	margin-top: 140px;
 }
 
-#contact-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-}
 
 #inputs {
 	padding: 40px;
