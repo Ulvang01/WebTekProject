@@ -4,10 +4,20 @@ import PaletteGenerator from './modules/PaletteGenerator.js';
 
 document.getElementById('color-input').oninput = () => changeColor();
 
-document.getElementById('submit-btn').onclick = () => {
+document.getElementById('submit-btn').onclick = () => handleButtonClick();
+
+/**
+ * It takes the color code from the input field, checks if it's a valid color code, and if it is, it
+ * creates a new PaletteGenerator object, generates the palettes, creates the components, and scrolls
+ * to the color section
+ */
+const handleButtonClick = () => {
 	const color = document.getElementById('color-input').value;
 
-	if (color.includes('#') && (color.length === 4 || color.length === 7)) {
+	/* A regular expression that checks if the input is a valid hex code. */
+	const reg = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i;
+
+	if (reg.test(color)) {
 		const colorGenerator = new PaletteGenerator(color);
 		colorGenerator.generatePalettes();
 
@@ -33,6 +43,6 @@ document.getElementById('submit-btn').onclick = () => {
 			}
 		};
 	} else {
-		console.error('Please enter a valid color code');
+		console.error('Please enter a valid hex code');
 	}
 };

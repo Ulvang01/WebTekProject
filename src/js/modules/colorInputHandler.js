@@ -1,3 +1,7 @@
+/**
+ * It changes the color of the text in the input field to black or white depending on the background
+ * color
+ */
 const changeColor = () => {
 	const colorInput = document.getElementById('color-input');
 	const color = colorInput.value;
