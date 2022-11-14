@@ -1,3 +1,6 @@
+/**
+ * It removes the color section from the DOM
+ */
 const deleteSection = () => {
 	const colorSection = document.getElementById('color-section');
 	if (colorSection) {
@@ -5,6 +8,12 @@ const deleteSection = () => {
 	}
 };
 
+/**
+ * It takes in an object of color palettes, deletes the current color section, creates a new color
+ * section, and then creates a color container for each color palette, which contains a color box with
+ * a color frame for each color in the palette
+ * @param colorPalletes - An object containing the color palletes.
+ */
 const createComponents = (colorPalletes) => {
 	deleteSection();
 
@@ -36,6 +45,7 @@ const createComponents = (colorPalletes) => {
 			colorCode.setAttribute('class', 'color-code-input');
 			colorCode.setAttribute('type', 'text');
 			colorCode.setAttribute('value', color);
+			colorCode.setAttribute('onclick', 'this.select()');
 			colorCode.readOnly = true;
 			colorFrame.appendChild(colorCode);
 			colorBox.appendChild(colorFrame);
