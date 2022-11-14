@@ -1,4 +1,15 @@
 window.onload = () => {
+	generateHeader();
+	setActiveNavLink();
+	hamburgerMenuHandler();
+};
+
+/**
+ * It inserts a header element with a nav element inside of it, which contains an anchor element with a
+ * logo image, a paragraph element with a span element inside of it, a div element with three div
+ * elements inside of it, and a div element with three anchor elements inside of it
+ */
+const generateHeader = () => {
 	document.body.insertAdjacentHTML(
 		'afterbegin',
 		`<header>
@@ -20,12 +31,23 @@ window.onload = () => {
             </nav>
         </header>`
 	);
+};
 
+/**
+ * It adds the class 'inuse' to the nav link that corresponds to the current page
+ */
+const setActiveNavLink = () => {
 	const fileName = location.href.split('/').slice(-1)[0].split('.')[0];
 	fileName == ''
 		? document.getElementById(`index-nav`).classList.add('inuse')
 		: document.getElementById(`${fileName}-nav`).classList.add('inuse');
+};
 
+/**
+ * When the hamburger menu button is clicked, the menu button is toggled to an 'X' and the nav menu is
+ * shown
+ */
+const hamburgerMenuHandler = () => {
 	const menuBtn = document.querySelector('.menu-btn');
 	const menuNav = document.querySelector('.nav-list');
 	const navItems = document.querySelectorAll('.nav-item');

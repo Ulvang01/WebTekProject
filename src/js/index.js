@@ -4,7 +4,14 @@ import PaletteGenerator from './modules/PaletteGenerator.js';
 
 document.getElementById('color-input').oninput = () => changeColor();
 
-document.getElementById('submit-btn').onclick = () => {
+document.getElementById('submit-btn').onclick = () => handleButtonClick();
+
+/**
+ * It takes the color code from the input field, checks if it's a valid color code, and if it is, it
+ * creates a new PaletteGenerator object, generates the palettes, creates the components, and scrolls
+ * to the color section
+ */
+const handleButtonClick = () => {
 	const color = document.getElementById('color-input').value;
 
 	if (color.includes('#') && (color.length === 4 || color.length === 7)) {
