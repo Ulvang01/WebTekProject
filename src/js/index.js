@@ -14,7 +14,10 @@ document.getElementById('submit-btn').onclick = () => handleButtonClick();
 const handleButtonClick = () => {
 	const color = document.getElementById('color-input').value;
 
-	if (color.includes('#') && (color.length === 4 || color.length === 7)) {
+	/* A regular expression that checks if the input is a valid hex code. */
+	const reg = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i;
+
+	if (reg.test(color)) {
 		const colorGenerator = new PaletteGenerator(color);
 		colorGenerator.generatePalettes();
 
@@ -40,6 +43,6 @@ const handleButtonClick = () => {
 			}
 		};
 	} else {
-		console.error('Please enter a valid color code');
+		console.error('Please enter a valid hex code');
 	}
 };

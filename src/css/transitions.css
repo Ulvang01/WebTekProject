@@ -1,6 +1,4 @@
-main {
-	animation: transition-in 750ms;
-}
+/** KEYFRAMES **/
 
 @keyframes transition-in {
 	from {
@@ -14,6 +12,38 @@ main {
 	}
 }
 
+@keyframes fly-in {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes fly-out {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+/** END KEYFRAMES **/
+
+/** MAIN **/
+
+main {
+	animation: transition-in 750ms;
+}
+
+/** END MAIN **/
+
+
+/** NAV BUTTON **/
 .close {
 	transform: rotate(180deg);
 }
@@ -30,30 +60,16 @@ main {
 	transform: rotate(-45deg) translate(7px, -6px);
 }
 
+/** END NAV BUTTON **/
+
+/** NAV MENU **/
+
 header > nav > .nav-list.fly-in {
 	animation: fly-in 500ms;
-}
-
-@keyframes fly-in {
-	from {
-		transform: translateX(100%);
-	}
-
-	to {
-		transform: translateX(0);
-	}
 }
 
 header > nav > .nav-list.fly-out {
 	animation: fly-out 500ms;
 }
 
-@keyframes fly-out {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(100%);
-	}
-}
+/** END NAV MENU **/
