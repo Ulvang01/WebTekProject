@@ -1,7 +1,11 @@
 /* It takes a hex color and returns a bunch of other colors based on the color theory */
 class ColorHandler {
 	constructor(hex) {
-		this.hex = hex;
+		this.hex = hex.length !== 4 ? hex : this.expandHex(hex);
+	}
+
+	expandHex(hex) {
+		return hex.replace(/#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/g, '#$1$1$2$2$3$3');
 	}
 
 	/**
