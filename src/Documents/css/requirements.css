@@ -1,0 +1,90 @@
+* {
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+	color: #3b4252;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-image: linear-gradient(
+		to right bottom,
+		#81a1c1,
+		#71aac2,
+		#69b2bc,
+		#6eb8b0,
+		#80bca0,
+		#8fbf97,
+		#a1c18f,
+		#b4c289,
+		#c1c588,
+		#cfc788,
+		#ddc989,
+		#ebcb8b
+	);
+}
+
+.body-container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 80ch;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #2e3440;
+}
+
+.changes b {
+	color: #ebcd8b;
+}
+
+a {
+	text-decoration: none;
+	color: #ebcd8b;
+}
+
+#filetree {
+	height: 400px;
+	width: auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+table > thead > tr {
+	backdrop-filter: hue-rotate(60deg);
+	color: #f9f7f7;
+	text-align: left;
+}
+
+table th,
+table td {
+	padding: 12px 15px;
+}
+
+table > tbody > tr:nth-of-type(even) {
+	backdrop-filter: hue-rotate(40deg);
+}
+
+#avatar {
+	border-radius: 50%;
+	width: 150px;
+	border: 3px solid #000;
+}

@@ -18,6 +18,42 @@
 
 /** END VARIABLES **/
 
+/** KEYFRAMES **/
+
+@keyframes transition-in {
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
+}
+
+@keyframes fly-in {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes fly-out {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(100%);
+	}
+}
+
+/** END KEYFRAMES **/
+
 /** GLOBAL **/
 
 * {
@@ -78,6 +114,7 @@ nav {
 main {
 	width: 100%;
 	height: 100%;
+	animation: transition-in 750ms;
 }
 
 form {
@@ -164,16 +201,11 @@ nav > .logo > .anchor {
 #home {
 	min-height: 100vh;
 	position: relative;
-	background-color: var(--blue-100);
 }
 
 #home > .content {
 	display: flex;
 	justify-content: center;
-}
-
-#home > .content > .container {
-	z-index: 10;
 }
 
 .button-container {
@@ -239,7 +271,7 @@ nav > .logo > .anchor {
 	bottom: 0;
 	width: 100vw;
 	height: auto;
-	z-index: 0;
+	z-index: -1;
 }
 
 .home-text {
@@ -397,18 +429,19 @@ nav > .logo > .anchor {
 	margin-top: -15px;
 }
 
+#contact-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+}
+
 #contact-main > .container > h1 {
 	font-size: 4rem;
 	margin: 0 0 10px;
 	color: var(--orange);
 	margin-top: 140px;
-}
-
-#contact-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
 }
 
 #inputs {
@@ -540,6 +573,30 @@ nav > .logo > .anchor {
 		background-color: var(--white);
 		transition: all 0.5s ease-out;
 		border-radius: 2px;
+	}
+
+	.close {
+		transform: rotate(180deg);
+	}
+
+	.close > .btn-line:first-child {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.close > .btn-line:nth-child(2) {
+		opacity: 0;
+	}
+
+	.close > .btn-line:last-child {
+		transform: rotate(-45deg) translate(7px, -6px);
+	}
+
+	header > nav > .nav-list.fly-in {
+		animation: fly-in 500ms;
+	}
+
+	header > nav > .nav-list.fly-out {
+		animation: fly-out 500ms;
 	}
 
 	/** END HEADER **/
@@ -724,7 +781,7 @@ nav > .logo > .anchor {
 		max-width: 45ch;
 	}
 
-	#about > .about-text > h1{
+	#about > .about-text > h1 {
 		margin-top: 100px;
 		font-size: 3rem;
 	}

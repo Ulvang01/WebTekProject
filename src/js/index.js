@@ -15,7 +15,7 @@ const handleButtonClick = () => {
 	const color = document.getElementById('color-input').value;
 
 	/* A regular expression that checks if the input is a valid hex code. */
-	const reg = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i;
+	const reg = /^#([0-9a-fA-F]{3}){1,2}$/i;
 
 	if (reg.test(color)) {
 		const colorGenerator = new PaletteGenerator(color);
