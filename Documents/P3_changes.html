@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changes</title>
+  <link rel="stylesheet" href="css/requirements.css" />
+</head>
+<body>
+  <div class="body-container">
+    <header>
+      <h1>P3 Changes</h1>
+      <p>
+        <b>Names:</b> Christoffer Thorvaldsen, Edvard Aasen, Leif
+        Eggenfellner, Scott Juvik, Sepanta Ganjei, Simon Bjerkås
+      </p>
+      <p><b>Date:</b> 16.11.2022</p>
+    </header>
+    <main>
+      <section id="deliverables">
+        <h2>Administrative Details</h2>
+        <img src="./img/AliceBobSmith.png" alt="Alice Bob Smith" id="avatar">
+        <div class="administrative-details">
+          <p><b>Client name:</b> Alice Bob Smith</p>
+          <p><b>Website name:</b> Color Ocean</p>
+          <p><b>Contact person:</b> Klara Lousie Moltu Wüstenberg</p>
+          <p>
+            <b>Link to our website:</b> 
+            <a href="https://folk.ntnu.no/leife/src/">Click here</a>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>The changes we have made</h2>
+          <div class="changes">
+            <p>
+              We were happy with our original design. However, the colors on the
+              desktop design were a little dull and off-theme. Additionally, we
+              decided to change the gradient background on the mobile design and
+              add some gifs to liven up the page.
+            </p>
+            <p>
+              <b>index.html:</b> The changes we made to the index page are
+              mainly on the desktop version. The most noticeable changes are the
+              change of background color on the main page and the nav bar.
+              Additionally, we removed the footer, added the contact link to the
+              nav bar, and replaced the back-to-the-top button with an up-arrow
+              button. Furthermore, we added additional padding to the top of the
+              color section.
+            </p>
+            <p>
+              <b>about.html:</b> Changes made to the about page are mainly the
+              background, as mentioned above. We planned to have a gradient
+              background on both mobile and desktop; however, this felt boring
+              and inconsistent with the rest of the page. After some discussion,
+              we agreed to have the same background color theme on the entire
+              website. Furthermore, we added a gif on the mobile page. Also, we
+              decided to continue with the wave theme from the main page on the
+              desktop to make the feel of the entire website more consistent. 
+            </p>
+            <p>
+              <b>contact.html:</b> We made a few changes to the contact page. We
+              changed the background on the desktop version to some waves
+              instead of the gradient here. We added the wave as an image in the
+              main body. We also made changes to the mobile CSS. We removed the
+              form on mobile in favor of just having the contact email as a
+              clickable link that would open a new email draft. We also added a
+              gif on the mobile page. Everything else has stayed the same.
+            </p>
+            <p>
+              <b>JavaScript:</b> We also decided to create a modules folder that
+              contains all modules used in the other JavaScript files. These
+              file are imported and used in the js folder. Furthermore, we
+              decided to write our JavaScript in multiple files to keep the
+              JavaScript structured. 
+            </p>
+            <p>
+              <b>colorElementCreator.js:</b> This file contains the function
+              which creates the color section on the main page, after user has
+              clicked the "genrate" button. 
+            </p>
+            <p>
+              <b>ColorHandler.js:</b> This file contain a class, which is
+              responsible for handling all color calculations and contain
+              methods for generating the color schemes. 
+            </p>
+            <p>
+              <b>colorInputHandler.js:</b> This file checks if the inputted hex
+              is valid and changes the background-color and text-color based on
+              the given hexcode.
+            </p>
+            <p>
+              <b>PaletteGenerator.js:</b> This file contains a child class of
+              the colorHandler class. This file is responsible for generating
+              color palettes and stores them in a "palettes" property. 
+            </p>
+            <p>
+              <b>index.js:</b> The index file handles actions when the generate
+              button is clicked. It is responsible for calling the
+              "colorInputHandler" on user input.
+            </p>
+            <p>
+              <b>mailHandler.js:</b> This file retrieves values of the input
+              field and text area on "contact.html". Thereafter, it opens mail
+              client with prefilled subject and body.
+            </p>
+            <p>
+              <b>navGenerator.js:</b> This file creates the nav-bar and sets the
+              active link, based on the URL. It also manages classes for the
+              "hamburger" menu on mobile.
+            </p>
+            <p>
+              <b>Hosting:</b> Because we had to make our GitHub repository
+              private due to plagiarism checks, the website is hosted no
+              folk.ntnu.no.
+            </p>
+          </div>
+      </section>
+      <section>
+        <h2>Updated src folder</h2>
+          <div class="src-folder">
+            <img src="./img/filetree.png" id="filetree">
+          </div>
+        <h2>Final Work Division</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Filename</th>
+              <th>Description</th>
+              <th>In charge</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>index.html</td>
+              <td>The main page</td>
+              <td>Leif, Scott</td>
+            </tr>
+            <tr>
+              <td>contact.html</td>
+              <td>Get in touch with us site</td>
+              <td>Edvard, Sepanta</td>
+            </tr>
+            <tr>
+              <td>about.html</td>
+              <td>Info about the site</td>
+              <td>Simon</td>
+            </tr>
+            <tr>
+              <td>colorElementCreator.js</td>
+              <td>Script to generate pallettes</td>
+              <td>Leif</td>
+            </tr>
+            <tr>
+              <td>colorHandler.js</td>
+              <td>Helper functions to generate the color schemes</td>
+              <td>Christoffer</td>
+            </tr>
+            <tr> 
+              <td>colorInputHandler.js</td>
+              <td>Manage colors of input on the home page</td>
+              <td>Leif</td>
+            </tr>
+            <tr>
+              <td>PaletteGenerator.js</td>
+              <td>Generate color palettes</td>
+              <td>Christoffer</td>
+            </tr>
+            <tr>
+              <td>index.js</td>
+              <td>Script for index.html</td>
+              <td>Leif</td>
+            </tr>
+            <tr>
+              <td>mailHandler.js</td>
+              <td>Opens mail client with prefilled subject and body</td>
+              <td>Leif</td>
+            </tr>
+            <tr>
+              <td>navGenerator.js</td>
+              <td>Generates nav and handles "hamburger" menu</td>
+              <td>Leif</td>
+            </tr>
+            <tr>
+              <td>style.css</td>
+              <td>All styling for the webpage</td>
+              <td>Everyone</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>  
+
+</body>
+</html>
