@@ -5,7 +5,10 @@ class ColorHandler {
 	}
 
 	expandHex(hex) {
-		return hex.replace(/#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/g, '#$1$1$2$2$3$3');
+		return hex.replace(
+			/#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/g,
+			'#$1$1$2$2$3$3'
+		);
 	}
 
 	/**

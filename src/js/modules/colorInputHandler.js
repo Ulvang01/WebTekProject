@@ -20,15 +20,14 @@ const changeColor = () => {
 			.split('(')[1]
 			.split(')')[0]
 			.split(',');
-			
+
 		const colorYIQ = Math.round(
-				(bgColor[0] * 299 + bgColor[1] * 587 + bgColor[2] * 114) / 1000
+			(bgColor[0] * 299 + bgColor[1] * 587 + bgColor[2] * 114) / 1000
 		);
-		
+
 		const textColor = colorYIQ >= 100 ? '#2e3440' : '#f9f7f7';
 		colorInput.style.color = textColor;
 	}
 };
-
 
 export default changeColor;

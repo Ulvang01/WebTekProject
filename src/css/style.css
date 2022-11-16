@@ -54,11 +54,21 @@
 }
 
 @keyframes shake {
-	0% { transform: translateX(0) }
-	25% { transform: translateX(5px) }
-	50% { transform: translateX(-5px) }
-	75% { transform: translateX(5px) }
-	100% { transform: translateX(0) }
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(5px);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+	75% {
+		transform: translateX(5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 /** END KEYFRAMES **/
@@ -248,7 +258,7 @@ nav > .logo > .anchor {
 	width: 190px;
 	padding: 10px 0;
 	font-size: 2rem;
-	transition: all .15s ease-in-out;
+	transition: all 0.15s ease-in-out;
 }
 
 #submit-btn:hover {
@@ -262,7 +272,7 @@ nav > .logo > .anchor {
 }
 
 #submit-btn:hover > .anchor {
-	transition: transform .6s ease-in-out;
+	transition: transform 0.6s ease-in-out;
 	transform: rotate(360deg);
 }
 
@@ -281,7 +291,7 @@ nav > .logo > .anchor {
 }
 
 #color-input.invalid {
-	animation: shake .5s;
+	animation: shake 0.5s;
 }
 
 .error-message {
@@ -508,7 +518,7 @@ nav > .logo > .anchor {
 	padding: 10px;
 	font-size: 25px;
 	margin-top: 20px;
-	transition: all .2s ease;
+	transition: all 0.2s ease;
 	filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 }
 
@@ -589,7 +599,7 @@ nav > .logo > .anchor {
 
 	.menu-btn {
 		cursor: pointer;
-		transition: all .5s ease-out;
+		transition: all 0.5s ease-out;
 		height: min-content;
 		display: flex;
 		flex-direction: column;
@@ -600,7 +610,7 @@ nav > .logo > .anchor {
 		width: 26px;
 		height: 3px;
 		background-color: var(--white);
-		transition: all .5s ease-out;
+		transition: all 0.5s ease-out;
 		border-radius: 2px;
 	}
 

@@ -5,7 +5,7 @@ import PaletteGenerator from './modules/PaletteGenerator.js';
 document.getElementById('color-input').oninput = () => changeColor();
 
 document.querySelector('.button-container').onsubmit = (event) => {
-	event.preventDefault()
+	event.preventDefault();
 	handleColorSubmit();
 };
 
@@ -25,9 +25,11 @@ const handleColorSubmit = () => {
 	/* A regular expression that checks if the input is a valid hex code. */
 	const reg1 = /^#([0-9a-fA-F]{3}){1,2}$/i;
 	const reg2 = /^([0-9a-fA-F]{3}){1,2}$/i;
-	
+
 	if (reg1.test(color) || reg2.test(color)) {
-		const colorGenerator = new PaletteGenerator(reg1.test(color) ? color : '#' + color);
+		const colorGenerator = new PaletteGenerator(
+			reg1.test(color) ? color : '#' + color
+		);
 		colorGenerator.generatePalettes();
 
 		createComponents(colorGenerator.palettes);
@@ -52,9 +54,12 @@ const handleColorSubmit = () => {
 			}
 		};
 	} else {
-		document.getElementById("color-input").classList.add('invalid');
+		document.getElementById('color-input').classList.add('invalid');
 		generateErrorComponent();
-		setTimeout(() => (document.getElementById("color-input").classList.remove('invalid')), 500);
+		setTimeout(
+			() => document.getElementById('color-input').classList.remove('invalid'),
+			500
+		);
 	}
 };
 
@@ -63,4 +68,4 @@ const generateErrorComponent = () => {
 	errorText.innerText = 'Please enter a valid Hex color code';
 	errorText.classList.add('error-message');
 	document.querySelector('.button-container').appendChild(errorText);
-}
+};
