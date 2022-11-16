@@ -7,6 +7,7 @@
 
 /** VARIABLES **/
 :root {
+	--red: #d62500;
 	--orange: #fd7702;
 	--white: #f9f7f7;
 	--blue-50: #65c6c4;
@@ -49,6 +50,24 @@
 
 	to {
 		transform: translateX(100%);
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(5px);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+	75% {
+		transform: translateX(5px);
+	}
+	100% {
+		transform: translateX(0);
 	}
 }
 
@@ -252,6 +271,11 @@ nav > .logo > .anchor {
 	width: auto;
 }
 
+#submit-btn:hover > .anchor {
+	transition: transform 0.6s ease-in-out;
+	transform: rotate(360deg);
+}
+
 #color-input {
 	filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 	display: flex;
@@ -264,6 +288,21 @@ nav > .logo > .anchor {
 	width: 190px;
 	padding: 10px 0;
 	text-align: center;
+}
+
+#color-input.invalid {
+	animation: shake 0.5s;
+}
+
+.error-message {
+	color: var(--red);
+	font-size: 1.4rem;
+	margin: 1px 0;
+	border-radius: 4px;
+	padding: 4px 8px;
+	background-color: var(--white);
+
+	/* backdrop-filter: contrast(50%); */
 }
 
 #wave-img {
@@ -288,7 +327,7 @@ nav > .logo > .anchor {
 }
 
 .byline {
-	color: var(--white);
+	color: var(--blue-50);
 	margin: 0 0 10px;
 }
 
