@@ -444,7 +444,6 @@ nav > .logo > .anchor {
 	margin-top: 140px;
 }
 
-
 #inputs {
 	padding: 40px;
 	backdrop-filter: blur(10px);
@@ -583,11 +582,11 @@ nav > .logo > .anchor {
 	.close > .btn-line:first-child {
 		transform: rotate(45deg) translate(5px, 5px);
 	}
-	
+
 	.close > .btn-line:nth-child(2) {
 		opacity: 0;
 	}
-	
+
 	.close > .btn-line:last-child {
 		transform: rotate(-45deg) translate(7px, -6px);
 	}
@@ -595,7 +594,7 @@ nav > .logo > .anchor {
 	header > nav > .nav-list.fly-in {
 		animation: fly-in 500ms;
 	}
-	
+
 	header > nav > .nav-list.fly-out {
 		animation: fly-out 500ms;
 	}
@@ -782,7 +781,7 @@ nav > .logo > .anchor {
 		max-width: 45ch;
 	}
 
-	#about > .about-text > h1{
+	#about > .about-text > h1 {
 		margin-top: 100px;
 		font-size: 3rem;
 	}
