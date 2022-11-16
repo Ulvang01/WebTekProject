@@ -5,7 +5,7 @@
 const changeColor = () => {
 	const colorInput = document.getElementById('color-input');
 	const color = colorInput.value;
-	const reg = /^#([0-9a-f]{3}){1,2}$/i;
+	const reg = /^#([0-9a-fA-F]{3}){1,2}$/i;
 	if (reg.test(color)) {
 		colorInput.style.backgroundColor = color;
 	}
