@@ -208,10 +208,6 @@ nav > .logo > .anchor {
 	justify-content: center;
 }
 
-#home > .content > .container {
-	z-index: 10;
-}
-
 .button-container {
 	display: flex;
 	flex-direction: column;
