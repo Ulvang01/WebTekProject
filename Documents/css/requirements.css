@@ -1,5 +1,5 @@
 * {
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 	color: #3b4252;
 }
 
@@ -12,7 +12,21 @@ body {
 body {
 	display: flex;
 	justify-content: center;
-	background-image: linear-gradient(to right bottom, #81a1c1, #71aac2, #69b2bc, #6eb8b0, #80bca0, #8fbf97, #a1c18f, #b4c289, #c1c588, #cfc788, #ddc989, #ebcb8b);
+	background-image: linear-gradient(
+		to right bottom,
+		#81a1c1,
+		#71aac2,
+		#69b2bc,
+		#6eb8b0,
+		#80bca0,
+		#8fbf97,
+		#a1c18f,
+		#b4c289,
+		#c1c588,
+		#cfc788,
+		#ddc989,
+		#ebcb8b
+	);
 }
 
 .body-container {
@@ -25,8 +39,13 @@ h1 {
 	font-size: 3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: #2E3440;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #2e3440;
 }
 
 .changes b {
@@ -69,8 +88,6 @@ table > tbody > tr:nth-of-type(even) {
 	width: 150px;
 	border: 3px solid #000;
 }
-
-
 
 #avatar {
 	border-radius: 50%;
