@@ -4,6 +4,11 @@ class ColorHandler {
 		this.hex = hex.length !== 4 ? hex : this.expandHex(hex);
 	}
 
+	/**
+	 * It takes a hexadecimal color value and expands it to a full six-digit hexadecimal color value
+	 * @param hex - The hexadecimal color value to expand.
+	 * @returns the hex value with the # symbol and the three hex values.
+	 */
 	expandHex(hex) {
 		return hex.replace(
 			/#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/g,

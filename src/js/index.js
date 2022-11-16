@@ -63,6 +63,10 @@ const handleColorSubmit = () => {
 	}
 };
 
+/**
+ * It creates a paragraph element, adds some text to it, adds a class to it, and then appends it to the
+ * button container
+ */
 const generateErrorComponent = () => {
 	const errorText = document.createElement('p');
 	errorText.innerText = 'Please enter a valid Hex color code';
