@@ -675,6 +675,7 @@ nav > .logo > .anchor {
 
 	.home-text > .byline {
 		font-size: 2rem;
+		color: var(--white);
 		margin: 0;
 	}
 
@@ -703,6 +704,10 @@ nav > .logo > .anchor {
 		border-radius: 10px;
 		display: flex;
 		justify-content: center;
+	}
+
+	.error-message {
+		font-size: 1rem;
 	}
 
 	#submit-btn > .anchor {
