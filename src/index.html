@@ -4,12 +4,41 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./style.css" />
-		<script src="../js/index.js" type="module" defer></script>
-		<title>WebTek Project</title>
+		<link rel="icon" href="https://fav.farm/⛵️" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="./js/index.js" type="module" defer></script>
+		<script src="./js/navGenerator.js" defer></script>
+		<title>Home • Color Ocean</title>
 	</head>
 	<body>
-		<h1>Hello <span id="name"></span></h1>
-		<button id="change-name" class="button">Change Name</button>
+		<main>
+			<section id="home">
+				<div class="content">
+					<div class="container">
+						<div class="home-text">
+							<h1 class="title">Enter a color</h1>
+							<p class="byline">
+								and generate<br /><span>color palettes</span>
+							</p>
+						</div>
+						<div class="button-container">
+							<input
+								type="text"
+								id="color-input"
+								value="#112D4E"
+								minlength="1"
+								maxlength="7"
+							/>
+							<button id="submit-btn">
+								<img class="anchor" src="./img/anchor-white.svg" alt="" />
+								Generate
+							</button>
+						</div>
+					</div>
+				</div>
+				<img id="wave-img" src="./img/wave@1x.svg" />
+				<img class="boat-gif gif" src="./img/boat.gif" alt="boat" />
+			</section>
+		</main>
 	</body>
 </html>

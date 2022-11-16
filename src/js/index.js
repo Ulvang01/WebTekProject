@@ -1,31 +1,48 @@
-/* Getting the elements from the HTML file. */
-const nameContainer = document.getElementById('name-container');
-const changeNameButton = document.getElementById('change-name');
+import changeColor from './modules/colorInputHandler.js';
+import createComponents from './modules/colorElementCreator.js';
+import PaletteGenerator from './modules/PaletteGenerator.js';
 
-/* Creating an array of names. */
-const names = ['Edvard', 'Leif', 'Christoffer', 'Scott', 'Simon', 'Sepanta'];
+document.getElementById('color-input').oninput = () => changeColor();
 
-/**
- * Generate a random name from a list of names.
- * @param names - An array of names to choose from.
- * @returns A random name from the array.
- */
-const generateName = (names) => {
-	const index = Math.floor(Math.random() * names.length);
-	return names[index];
-};
+document.getElementById('submit-btn').onclick = () => handleButtonClick();
 
 /**
- * It takes an array of names, generates a random name from that array, and then displays that name in
- * the HTML
- * @param names - an array of names
+ * It takes the color code from the input field, checks if it's a valid color code, and if it is, it
+ * creates a new PaletteGenerator object, generates the palettes, creates the components, and scrolls
+ * to the color section
  */
-const displayName = (names) => {
-	let name = generateName(names);
-	nameContainer.innerHTML = name;
-};
+const handleButtonClick = () => {
+	const color = document.getElementById('color-input').value;
 
-/* An event listener that listens for a click on the button and then runs the function displayName. */
-changeNameButton.onclick = () => {
-	displayName(names);
+	/* A regular expression that checks if the input is a valid hex code. */
+	const reg = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/i;
+
+	if (reg.test(color)) {
+		const colorGenerator = new PaletteGenerator(color);
+		colorGenerator.generatePalettes();
+
+		createComponents(colorGenerator.palettes);
+		document.getElementById('color-section').scrollIntoView();
+
+		if (!document.querySelector('.back-to-top')) {
+			document.body.insertAdjacentHTML(
+				'beforeend',
+				`
+					<a href="#home" class="back-to-top">
+						<img src="./img/arrow-up.svg" alt="arrow-up" />
+					</a>
+				`
+			);
+		}
+
+		window.onscroll = () => {
+			if (window.scrollY <= 0) {
+				document.querySelector('.back-to-top').style.display = 'none';
+			} else {
+				document.querySelector('.back-to-top').style.display = 'inline-block';
+			}
+		};
+	} else {
+		console.error('Please enter a valid hex code');
+	}
 };
