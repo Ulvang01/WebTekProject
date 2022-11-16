@@ -291,6 +291,7 @@ nav > .logo > .anchor {
 	border-radius: 4px;
 	padding: 4px 8px;
 	background-color: var(--white);
+
 	/* backdrop-filter: contrast(50%); */
 }
 
