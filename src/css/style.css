@@ -688,32 +688,33 @@ nav > .logo > .anchor {
 	}
 
 	#color-input {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		padding: 8px 0;
-		width: 100px;
+		width: 120px;
 		border-radius: 10px;
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
 	}
 
 	#submit-btn {
 		background-color: var(--blue-50);
-		width: 100px;
+		width: 120px;
 		filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		padding: 8px 0;
 		border-radius: 10px;
 		display: flex;
 		justify-content: center;
 	}
 
+	#submit-btn > .anchor {
+		height: 16px;
+		width: 16px;
+	}
+
 	.error-message {
 		font-size: 1rem;
 	}
 
-	#submit-btn > .anchor {
-		height: 14px;
-		width: 14px;
-	}
 
 	.palette-name {
 		color: var(--text-black);
